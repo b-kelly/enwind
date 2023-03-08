@@ -1,0 +1,26 @@
+{
+    "name": "bwind",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite demo",
+        "build": "tsc && vite build",
+        "dev:plugin": "npm run build:plugin -- --watch",
+        "build:plugin": "vite build -c vite.plugin.js",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.13",
+        "postcss": "^8.4.21",
+        "typescript": "^4.9.3",
+        "vite": "^4.1.0"
+    },
+    "dependencies": {
+        "tailwindcss": "^3.2.7"
+    },
+    "peerDependencies": {
+        "autoprefixer": "^10.4.13",
+        "postcss": "^8.4.21"
+    }
+}
