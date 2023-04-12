@@ -28,7 +28,7 @@ export default plugin(
                     },
                     success: {
                         DEFAULT: "var(--_bw-color-success)",
-                        focus: "var(--_bw-color-warn-success)",
+                        focus: "var(--_bw-color-success-focus)",
                     },
                     warn: {
                         DEFAULT: "var(--_bw-color-warn)",
