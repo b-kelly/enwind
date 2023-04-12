@@ -4,7 +4,8 @@
 
 @layer base {
     section {
-        @apply mb-2 border-b pb-2 flex flex-col gap-2;
+        @apply mb-4 border-b pb-4 flex flex-col gap-2
+            last-of-type:border-b-0;
     }
 
     section h2 {

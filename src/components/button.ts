@@ -23,7 +23,7 @@ const button: CssInJs = (theme) => ({
     ".btn": {
         display: "inline-block",
         padding: theme("padding.2"),
-        borderWidth: "1px",
+        borderWidth: "1px", //TODO theme("border.DEFAULT"),
         borderColor: "transparent",
         borderRadius: theme("borderRadius.DEFAULT"),
         color: theme("colors.primary.DEFAULT"),
