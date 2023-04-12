@@ -5,7 +5,7 @@ const btnHover: CssInJs = (theme) => ({
     borderColor: theme("colors.body.highlight"),
 });
 
-const btnFocus: CssInJs = (theme) => ({
+const btnFocus: CssInJs = () => ({
     outlineWidth: "2px", //TODO theme("outline.2"),
 });
 
