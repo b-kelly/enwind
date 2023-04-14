@@ -21,4 +21,13 @@
     .swatch {
         @apply w-8 h-8 inline-block border;
     }
+
+    .icon {
+        @apply inline-block align-middle h-[20px] w-[20px] text-[0];
+    }
+
+    .icon-adjustments {
+        /* TODO properly import and transform */
+        background-image: url("heroicons/20/solid/adjustments-horizontal.svg?raw");
+    }
 }

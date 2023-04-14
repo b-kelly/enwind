@@ -40,6 +40,15 @@ const button: CssInJs = (theme) => ({
     ".btn.btn-primary": {
         ...btnSelected(theme),
     },
+    ".btn.btn-icon": {
+        borderColor: "transparent",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        alignSelf: "stretch",
+        borderRadius: theme("borderRadius.full"),
+        gap: theme("gap.2"),
+    },
 });
 
 export default button;
