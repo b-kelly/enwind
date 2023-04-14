@@ -10,7 +10,7 @@ const input: CssInJs = (theme) => ({
         display: "inline-block",
         padding: `${theme("padding.1")} ${theme("padding.2")}`,
         borderRadius: theme("borderRadius.DEFAULT"),
-        borderWidth: "1px", //TODO theme("border.DEFAULT"),
+        borderWidth: theme("borderWidth.DEFAULT"),
         accentColor: theme("colors.primary.DEFAULT"),
         "&:focus, &.focus": {
             outlineWidth: "2px", //TODO theme("outline.2")
@@ -19,6 +19,15 @@ const input: CssInJs = (theme) => ({
             cursor: "not-allowed",
             opacity: theme("opacity.60"),
             backgroundColor: theme("colors.body.highlight"),
+        },
+    },
+    ".form-group": {
+        display: "flex",
+        flexDirection: "column",
+        gap: theme("gap.1"),
+        "& label": {
+            fontSize: theme("fontSize.sm"),
+            lineHeight: theme("lineHeight.tight"),
         },
     },
 });
