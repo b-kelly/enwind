@@ -8,6 +8,7 @@ const table: CssInJs = (theme) => ({
         borderSpacing: "0",
         "& tr": {
             borderBottomWidth: theme("borderWidth.DEFAULT"),
+            borderBottomColor: theme("colors.body.highlight"),
             "&:last-of-type": {
                 borderBottomColor: "transparent",
             },
@@ -20,7 +21,7 @@ const table: CssInJs = (theme) => ({
         "& thead th": {
             fontWeight: theme("fontWeight.bold"),
             verticalAlign: "bottom",
-            whitespace: "no-wrap",
+            whiteSpace: "nowrap",
             lineHeight: theme("lineHeight.tight"),
             borderBottomWidth: theme("borderWidth.DEFAULT"),
             borderBottomColor: theme("colors.body.highlight"),
