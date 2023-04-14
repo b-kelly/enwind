@@ -8,9 +8,10 @@ const input: CssInJs = (theme) => ({
         outlineWidth: "0",
         outlineColor: theme("colors.primary.focus"),
         display: "inline-block",
-        padding: theme("padding.2"),
+        padding: `${theme("padding.1")} ${theme("padding.2")}`,
         borderRadius: theme("borderRadius.DEFAULT"),
         borderWidth: "1px", //TODO theme("border.DEFAULT"),
+        accentColor: theme("colors.primary.DEFAULT"),
         "&:focus, &.focus": {
             outlineWidth: "2px", //TODO theme("outline.2")
         },
