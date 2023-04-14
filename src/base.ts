@@ -1,6 +1,17 @@
 import type { CssInJs } from "./types";
 
 const css: CssInJs = (theme) => {
+    const darkModeVars = {
+        "color-scheme": "dark",
+        "--_bw-color-primary": theme("colors.teal.500", null),
+        "--_bw-color-primary-content": theme("colors.black", null),
+        "--_bw-color-primary-focus": theme("colors.teal.600", null),
+
+        "--_bw-color-body": theme("colors.slate.900", null),
+        "--_bw-color-body-content": theme("colors.white", null),
+        "--_bw-color-body-highlight": theme("colors.slate.600", null),
+    };
+
     const variables = {
         ":root": {
             "--_bw-color-primary": theme("colors.indigo.500", null),
@@ -22,20 +33,16 @@ const css: CssInJs = (theme) => {
         },
         "@media (prefers-color-scheme: dark)": {
             ":root": {
-                "color-scheme": "dark",
-                "--_bw-color-primary": theme("colors.teal.500", null),
-                "--_bw-color-primary-content": theme("colors.black", null),
-                "--_bw-color-primary-focus": theme("colors.teal.600", null),
-
-                "--_bw-color-body": theme("colors.slate.900", null),
-                "--_bw-color-body-content": theme("colors.white", null),
-                "--_bw-color-body-highlight": theme("colors.slate.600", null),
+                ...darkModeVars,
             },
+        },
+        "body.theme-dark": {
+            ...darkModeVars,
         },
     };
 
     const base = {
-        html: {
+        "html, body": {
             backgroundColor: theme("colors.body.DEFAULT", null),
             color: theme("colors.body.content", null),
         },

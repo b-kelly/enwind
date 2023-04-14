@@ -23,11 +23,25 @@
     }
 
     .icon {
-        @apply inline-block align-middle h-[20px] w-[20px] text-[0];
+        @apply inline-block h-[20px] w-[20px] text-[0] align-bottom;
+    }
+
+    .icon::after {
+        @apply h-full w-full inline-block bg-current;
+        content: "";
+        -webkit-mask: var(--bg-icon) no-repeat center;
+        mask: var(--bg-icon) no-repeat center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
     }
 
     .icon-adjustments {
         /* TODO properly import and transform */
-        background-image: url("heroicons/20/solid/adjustments-horizontal.svg?raw");
+        --bg-icon: url("heroicons/20/solid/adjustments-horizontal.svg?raw");
+    }
+
+    .icon-sparkles {
+        /* TODO properly import and transform */
+        --bg-icon: url("heroicons/20/solid/sparkles.svg?raw");
     }
 }
