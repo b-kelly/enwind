@@ -44,4 +44,9 @@
         /* TODO properly import and transform */
         --bg-icon: url("heroicons/20/solid/sparkles.svg?raw");
     }
+
+    .icon-x-mark {
+        /* TODO properly import and transform */
+        --bg-icon: url("heroicons/20/solid/x-mark.svg?raw");
+    }
 }
