@@ -7,7 +7,7 @@ const table: CssInJs = (theme) => ({
         borderCollapse: "collapse",
         borderSpacing: "0",
         "& tr": {
-            borderBottomWidth: "1px",
+            borderBottomWidth: theme("borderWidth.DEFAULT"),
             "&:last-of-type": {
                 borderBottomColor: "transparent",
             },
@@ -22,8 +22,8 @@ const table: CssInJs = (theme) => ({
             verticalAlign: "bottom",
             whitespace: "no-wrap",
             lineHeight: theme("lineHeight.tight"),
-            borderBottomWidth: "1px",
-            borderBottomColor: theme("gray.300"),
+            borderBottomWidth: theme("borderWidth.DEFAULT"),
+            borderBottomColor: theme("colors.body.highlight"),
         },
     },
 });
