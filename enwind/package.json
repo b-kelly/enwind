@@ -1,0 +1,26 @@
+{
+    "name": "enwind",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "main": "./dist/plugin.umd.cjs",
+    "module": "./dist/plugin.js",
+    "scripts": {
+        "dev": "npm run build -- --watch",
+        "build": "vite build -c vite.plugin.js",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.14",
+        "postcss": "^8.4.21",
+        "typescript": "^5.0.4",
+        "vite": "^4.2.1"
+    },
+    "dependencies": {
+        "tailwindcss": "^3.3.1"
+    },
+    "peerDependencies": {
+        "autoprefixer": "^10.4.13",
+        "postcss": "^8.4.21"
+    }
+}
