@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        @apply p-4;
+    }
+
     section {
         @apply mb-4 border-b pb-4 flex flex-col gap-2
             last-of-type:border-b-0;
@@ -17,11 +25,8 @@
     }
 }
 
-@layer components {
-    .swatch {
-        @apply w-8 h-8 inline-block border;
-    }
 
+@layer components {
     .icon {
         @apply inline-block h-[20px] w-[20px] text-[0] align-bottom;
     }

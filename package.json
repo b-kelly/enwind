@@ -3,7 +3,7 @@
     "private": "true",
     "workspaces": [
         "enwind",
-        "demo"
+        "docs"
     ],
     "devDependencies": {
         "typescript": "^5.0.4"
