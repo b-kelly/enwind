@@ -1,5 +1,8 @@
-<section>
-	<h2>Colors</h2>
+<script>
+	import Section from '$lib/Section.svelte';
+</script>
+
+<Section title="Colors">
 	<div class="grid grid-cols-2 gap-2 font-mono">
 		<div class="flex ai-center gap-2">
 			<span class="swatch bg-body" />
@@ -50,7 +53,7 @@
 			<span>colors.danger.focus</span>
 		</div>
 	</div>
-</section>
+</Section>
 
 <style>
 	.swatch {

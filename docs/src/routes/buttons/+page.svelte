@@ -1,5 +1,8 @@
-<section>
-	<h2>Buttons</h2>
+<script>
+	import Section from '$lib/Section.svelte';
+</script>
+
+<Section title="Buttons">
 	<h3>.btn</h3>
 	<div class="flex gap-2">
 		<button type="button" class="btn">default</button>
@@ -38,4 +41,4 @@
 			</button>
 		</div>
 	</div>
-</section>
+</Section>

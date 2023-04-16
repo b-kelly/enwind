@@ -1,5 +1,8 @@
-<section>
-	<h2>Modals</h2>
+<script>
+	import Section from '$lib/Section.svelte';
+</script>
+
+<Section title="Modals">
 	<aside class="modal visible relative p-16">
 		<div class="modal-dialog">
 			<header class="modal-title">
@@ -13,4 +16,4 @@
 			<footer class="modal-footer">Footer text</footer>
 		</div>
 	</aside>
-</section>
+</Section>

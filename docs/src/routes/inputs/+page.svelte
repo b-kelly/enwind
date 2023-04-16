@@ -1,4 +1,8 @@
-<section>
+<script>
+	import Section from '$lib/Section.svelte';
+</script>
+
+<Section title="Inputs">
 	<h2>Inputs</h2>
 	<h3>input[type=text]</h3>
 	<div class="grid grid-cols-2 gap-2">
@@ -26,18 +30,16 @@
 			<option>disabled</option>
 		</select>
 	</div>
-</section>
+</Section>
 
-<section>
-	<h2>Form groups</h2>
+<Section title="Form groups">
 	<div class="form-group">
 		<label for="fg-example-1">Foo label</label>
 		<input id="fg-example-1" type="text" class="input" />
 	</div>
-</section>
+</Section>
 
-<section>
-	<h2>Checks</h2>
+<Section title="Checks">
 	<div class="grid grid-cols-2 gap-2">
 		<div>
 			<input type="checkbox" class="check" />
@@ -54,4 +56,4 @@
 			<input type="radio" class="check" checked disabled />
 		</div>
 	</div>
-</section>
+</Section>

@@ -1,5 +1,8 @@
-<section>
-	<h2>Tables</h2>
+<script>
+	import Section from '$lib/Section.svelte';
+</script>
+
+<Section title="Tables">
 	<table class="table">
 		<thead>
 			<tr>
@@ -21,4 +24,4 @@
 			</tr>
 		</tbody>
 	</table>
-</section>
+</Section>

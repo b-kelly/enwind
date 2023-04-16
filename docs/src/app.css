@@ -10,19 +10,6 @@
     body {
         @apply p-4;
     }
-
-    section {
-        @apply mb-4 border-b pb-4 flex flex-col gap-2
-            last-of-type:border-b-0;
-    }
-
-    section h2 {
-        @apply text-2xl mb-2 font-mono;
-    }
-
-    section h3 {
-        @apply text-xl font-mono;
-    }
 }
 
 
