@@ -12,6 +12,9 @@
 		<a href="/modals">Modals</a>
 	</li>
 	<li>
+		<a href="/progress">Progress</a>
+	</li>
+	<li>
 		<a href="/tables">Tables</a>
 	</li>
 </ul>
