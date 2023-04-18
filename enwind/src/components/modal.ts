@@ -31,7 +31,7 @@ const modal: CssInJs = (theme) => ({
             fontSize: theme("fontSize.2xl"),
             lineHeight: theme("lineHeight.8"),
             display: "flex",
-            alignItems: "start",
+            alignItems: "flex-start",
             justifyContent: "space-between",
         },
     },

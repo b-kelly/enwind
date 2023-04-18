@@ -5,6 +5,10 @@
         "enwind",
         "docs"
     ],
+    "scripts": {
+        "dev": "npm run dev -w docs",
+        "build": "npm run build -w enwind"
+    },
     "devDependencies": {
         "typescript": "^5.0.4"
     }
