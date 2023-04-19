@@ -1,6 +1,6 @@
 {
     "name": "enwind",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "module",
     "main": "./dist/plugin.umd.cjs",
     "module": "./dist/plugin.js",
@@ -12,10 +12,11 @@
         "dev": "npm run build -- --watch",
         "build": "vite build -c vite.plugin.js",
         "preview": "vite preview",
-        "prepublishOnly": "npm run build"
+        "prepublishOnly": "npm run build && copyfiles ../README.md ./README.md"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.14",
+        "copyfiles": "^2.4.1",
         "postcss": "^8.4.21",
         "typescript": "^5.0.4",
         "vite": "^4.2.1"
