@@ -1,20 +1,24 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <ul>
 	<li>
-		<a href="/colors">Colors</a>
+		<a href="{base}/colors">Colors</a>
 	</li>
 	<li>
-		<a href="/buttons">Buttons</a>
+		<a href="{base}/buttons">Buttons</a>
 	</li>
 	<li>
-		<a href="/inputs">Inputs</a>
+		<a href="{base}/inputs">Inputs</a>
 	</li>
 	<li>
-		<a href="/modals">Modals</a>
+		<a href="{base}/modals">Modals</a>
 	</li>
 	<li>
-		<a href="/progress">Progress</a>
+		<a href="{base}/progress">Progress</a>
 	</li>
 	<li>
-		<a href="/tables">Tables</a>
+		<a href="{base}/tables">Tables</a>
 	</li>
 </ul>

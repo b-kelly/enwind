@@ -22,16 +22,15 @@ jobs:
 
             - name: build
               env:
-                  BASE_PATH: "/b-kelly/enwind"
+                  BASE_PATH: "/enwind"
               run: |
                   npm run build -w docs
-                  touch build/.nojekyll
+                  touch docs/build/.nojekyll
 
             - name: Upload Artifacts
               uses: actions/upload-pages-artifact@v1
               with:
-                  # this should match the `pages` option in your adapter-static options
-                  path: "build/"
+                  path: "docs/build/"
 
     deploy:
         needs: build_site
