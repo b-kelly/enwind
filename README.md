@@ -13,7 +13,7 @@ npm install enwind
 Add the plugin to your `tailwind.config.js` file:
 
 ```js
-import enwind from "../enwind/src/index";
+import enwind from "enwind";
 
 export default {
     // ...
