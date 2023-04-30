@@ -12,7 +12,7 @@
 	export let icon: keyof typeof icons;
 </script>
 
-<span class="icon">{@html icons[icon]}</span>
+<span class="icon" {...$$restProps}>{@html icons[icon]}</span>
 
 <style>
 	.icon {

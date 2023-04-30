@@ -11,9 +11,7 @@
 				<header class="modal-title">
 					<span>Title text</span>
 					<button type="button" class="btn btn-icon">
-						<span title="Close">
-							<Icon icon="xmark" />
-						</span>
+						<Icon title="Close" icon="xmark" />
 						<span class="sr-only">Close</span>
 					</button>
 				</header>
