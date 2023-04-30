@@ -4,11 +4,9 @@
 </script>
 
 <Section title="Progress">
-	<Sample>
-		<div>
-			<div class="progress-circle" style="--value: 0">test</div>
-			<div class="progress-circle" style="--value: 50">test</div>
-			<div class="progress-circle" style="--value: 100">test</div>
-		</div>
+	<Sample class="flex gap-4">
+		<div class="progress-circle" style="--value: 0">0%</div>
+		<div class="progress-circle" style="--value: 50">50%</div>
+		<div class="progress-circle" style="--value: 100">100%</div>
 	</Sample>
 </Section>

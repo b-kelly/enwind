@@ -2,13 +2,16 @@
 	export let title: string = '';
 
 	let childContent: HTMLElement;
+
+	let className = '';
+	export { className as class };
 </script>
 
 <div class="flex flex-col gap-2">
 	{#if title}
 		<h3 class="text-xl font-mono">{title}</h3>
 	{/if}
-	<div class="contents" bind:this={childContent}>
+	<div class={className || 'contents'} bind:this={childContent}>
 		<slot />
 	</div>
 	<pre>{childContent?.innerHTML.replace(/>\s*?</g, '>\n<')}</pre>
