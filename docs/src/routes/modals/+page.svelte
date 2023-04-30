@@ -1,4 +1,5 @@
 <script>
+	import Icon from '$lib/Icon.svelte';
 	import Sample from '$lib/Sample.svelte';
 	import Section from '$lib/Section.svelte';
 </script>
@@ -10,7 +11,9 @@
 				<header class="modal-title">
 					<span>Title text</span>
 					<button type="button" class="btn btn-icon">
-						<span title="Close" class="icon icon-x-mark" />
+						<span title="Close">
+							<Icon icon="xmark" />
+						</span>
 						<span class="sr-only">Close</span>
 					</button>
 				</header>

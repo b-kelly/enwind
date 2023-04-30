@@ -1,10 +1,14 @@
 <script lang="ts">
 	export let title: string = '';
 
-	let childContent: HTMLElement;
-
 	let className = '';
 	export { className as class };
+
+	let childContent: HTMLElement | undefined;
+	$: innerContent = childContent?.innerHTML
+		.replace(/<!--.+?-->/g, '')
+		.replace(/<span class="icon.+?<\/span>/gs, '<Icon/>')
+		.replace(/>\s*?</g, '>\n<');
 </script>
 
 <div class="flex flex-col gap-2">
@@ -14,7 +18,7 @@
 	<div class={className || 'contents'} bind:this={childContent}>
 		<slot />
 	</div>
-	<pre>{childContent?.innerHTML.replace(/>\s*?</g, '>\n<')}</pre>
+	<pre>{innerContent}</pre>
 </div>
 
 <style>

@@ -1,5 +1,6 @@
 <script>
 	import { base } from '$app/paths';
+	import Icon from '$lib/Icon.svelte';
 	import '../app.css';
 
 	function toggleMode() {
@@ -10,7 +11,7 @@
 <nav class="flex justify-between items-center mb-4">
 	<h1 class="text-3xl font-bold"><a href={base || '/'}>enwind</a></h1>
 	<button class="btn inline-flex items-center gap-1" on:click={toggleMode} type="button">
-		<span class="icon icon-sparkles" />
+		<Icon icon={'sparkles'} />
 		Switch mode
 	</button>
 </nav>
