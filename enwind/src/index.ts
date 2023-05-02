@@ -1,19 +1,18 @@
 import plugin from "tailwindcss/plugin";
 import base from "./base";
 import components from "./components";
+import colors from "./colors";
 
 export default plugin(
-    function ({
-        addBase,
-        theme,
-        addComponents,
-        /*addUtilities,*/
-    }) {
+    function ({ addBase, theme, addComponents }) {
         addBase(base(theme));
         addComponents(components(theme));
     },
     {
         theme: {
+            enwind: {
+                colors,
+            },
             extend: {
                 colors: {
                     body: {

@@ -23,3 +23,27 @@ export default {
     plugins: [enwind],
 };
 ```
+
+## Colors
+
+Colors can be overridden in the `enwind` section of your Tailwind config:
+
+```json
+{
+    "theme": {
+        "extend": {
+            "enwind": {
+                "colors": {
+                    "dark": {
+                        "body": {
+                            "DEFAULT": "#ccc"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+Default values can be found in [colors.ts](./src/colors.ts).

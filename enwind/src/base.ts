@@ -1,35 +1,38 @@
 import type { CssInJs } from "./types";
 
 const css: CssInJs = (theme) => {
+    const enwind = (key: string, mode: string) =>
+        theme(`enwind.colors.${mode}.${key}`, null);
+
+    const genColors = (mode: string) => ({
+        "--_bw-color-primary": enwind("primary.DEFAULT", mode),
+        "--_bw-color-primary-content": enwind("primary.content", mode),
+        "--_bw-color-primary-focus": enwind("primary.focus", mode),
+
+        "--_bw-color-body": enwind("body.DEFAULT", mode),
+        "--_bw-color-body-content": enwind("body.content", mode),
+        "--_bw-color-body-highlight": enwind("body.highlight", mode),
+
+        "--_bw-color-success": enwind("success.DEFAULT", mode),
+        "--_bw-color-success-focus": enwind("success.focus", mode),
+
+        "--_bw-color-warn": enwind("warn.DEFAULT", mode),
+        "--_bw-color-warn-focus": enwind("warn.focus", mode),
+
+        "--_bw-color-danger": enwind("danger.DEFAULT", mode),
+        "--_bw-color-danger-focus": enwind("danger.focus", mode),
+    });
+
+    console.log(genColors("light"));
+
     const darkModeVars = {
         "color-scheme": "dark",
-        "--_bw-color-primary": theme("colors.teal.500", null),
-        "--_bw-color-primary-content": theme("colors.black", null),
-        "--_bw-color-primary-focus": theme("colors.teal.600", null),
-
-        "--_bw-color-body": theme("colors.slate.900", null),
-        "--_bw-color-body-content": theme("colors.white", null),
-        "--_bw-color-body-highlight": theme("colors.slate.600", null),
+        ...genColors("dark"),
     };
 
     const variables = {
         ":root": {
-            "--_bw-color-primary": theme("colors.indigo.500", null),
-            "--_bw-color-primary-content": theme("colors.white", null),
-            "--_bw-color-primary-focus": theme("colors.indigo.600", null),
-
-            "--_bw-color-body": theme("colors.white", null),
-            "--_bw-color-body-content": theme("colors.gray.900", null),
-            "--_bw-color-body-highlight": theme("colors.neutral.200", null),
-
-            "--_bw-color-success": theme("colors.green.500", null),
-            "--_bw-color-success-focus": theme("colors.green.600", null),
-
-            "--_bw-color-warn": theme("colors.amber.400", null),
-            "--_bw-color-warn-focus": theme("colors.amber.500", null),
-
-            "--_bw-color-danger": theme("colors.red.500", null),
-            "--_bw-color-danger-focus": theme("colors.red.600", null),
+            ...genColors("light"),
         },
         "@media (prefers-color-scheme: dark)": {
             ":root": {
