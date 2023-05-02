@@ -23,8 +23,6 @@ const css: CssInJs = (theme) => {
         "--_bw-color-danger-focus": enwind("danger.focus", mode),
     });
 
-    console.log(genColors("light"));
-
     const darkModeVars = {
         "color-scheme": "dark",
         ...genColors("dark"),
