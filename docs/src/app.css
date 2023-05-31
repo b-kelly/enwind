@@ -3,12 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-	html,
 	body {
-		height: 100%;
-	}
-
-	body {
-		@apply p-4;
+		@apply p-4 min-h-full;
 	}
 }
