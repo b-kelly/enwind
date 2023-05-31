@@ -43,7 +43,7 @@ const css: CssInJs = (theme) => {
     };
 
     const base = {
-        "html, body": {
+        body: {
             backgroundColor: theme("colors.body.DEFAULT", null),
             color: theme("colors.body.content", null),
         },
