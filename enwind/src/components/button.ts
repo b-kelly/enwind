@@ -26,14 +26,14 @@ const button: CssInJs = (theme) => ({
             borderColor: theme("colors.body.highlight"),
         },
         "&:focus-visible, &.focus": {
-            outlineWidth: theme("outlineWidth.2"),
+            outlineWidth: theme("outlineWidth.sm"),
             boxShadow: `inset 0 0 0 1px ${theme("colors.body.DEFAULT")}`,
         },
         "&:active, &.active": {
             transform: `scale(${theme("scale.95")})`,
         },
         "&:disabled": {
-            opacity: theme("opacity.60"),
+            opacity: theme("opacity.disabled"),
             pointerEvents: "none",
         },
     },
@@ -47,7 +47,7 @@ const button: CssInJs = (theme) => ({
         justifyContent: "center",
         alignSelf: "stretch",
         borderRadius: theme("borderRadius.full"),
-        gap: theme("gap.2"),
+        gap: theme("gap.sm"),
     },
 });
 

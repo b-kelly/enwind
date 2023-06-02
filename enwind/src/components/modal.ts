@@ -10,7 +10,7 @@ const modal: CssInJs = (theme) => ({
         display: "none",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "rgb(0 0 0 / 0.5)",
+        backgroundColor: "rgb(0 0 0 / 0.5)", // TODO add to colors?
         backdropFilter: "blur(8px)",
         "&.visible": {
             display: "flex",
@@ -20,16 +20,16 @@ const modal: CssInJs = (theme) => ({
             maxWidth: "100%",
             width: "100%",
             borderRadius: theme("borderRadius.DEFAULT"),
-            borderWidth: theme("border.DEFAULT"),
-            padding: theme("padding.6"),
+            borderWidth: theme("borderWidth.DEFAULT"),
+            padding: theme("padding.lg"),
             display: "flex",
             flexDirection: "column",
-            gap: theme("gap.6"),
+            gap: theme("gap.lg"),
             // TODO md:max-w-2xl
         },
         "& .modal-title": {
             fontSize: theme("fontSize.2xl"),
-            lineHeight: theme("lineHeight.8"),
+            lineHeight: theme("lineHeight.8"), //TODO add to utilities?
             display: "flex",
             alignItems: "flex-start",
             justifyContent: "space-between",

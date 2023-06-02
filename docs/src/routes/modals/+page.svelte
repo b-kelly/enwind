@@ -6,7 +6,7 @@
 
 <Section title="Modals">
 	<Sample>
-		<aside class="modal visible relative p-16">
+		<aside class="modal visible relative p-lg">
 			<div class="modal-dialog">
 				<header class="modal-title">
 					<span>Title text</span>

@@ -3,7 +3,7 @@ import { CssInJs } from "../types";
 const progress: CssInJs = (theme) => ({
     ".progress-circle": {
         "--value": "0",
-        "--width": "8rem", //theme("width.32"),
+        "--width": "8rem", //TODO theme("width.32"),
         "--thickness": "calc(var(--width) / 10)",
         position: "relative",
         display: "inline-flex",

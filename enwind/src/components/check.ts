@@ -11,10 +11,10 @@ const check: CssInJs = (theme) => ({
         outlineOffset: "1px", // TODO chrome overrides to this value?
         "&:disabled": {
             cursor: "not-allowed",
-            opacity: theme("opacity.60"),
+            opacity: theme("opacity.disabled"),
         },
         "&:focus, &.focus": {
-            outlineWidth: "2px", //TODO theme("outline.2")
+            outlineWidth: theme("outlineWidth.sm"),
         },
     },
 });
