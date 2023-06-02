@@ -6,5 +6,5 @@ export default {
 	theme: {
 		extend: {}
 	},
-	plugins: [enwind]
+	plugins: [enwind({ strict: true })]
 };
