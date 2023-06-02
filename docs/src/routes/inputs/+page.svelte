@@ -4,21 +4,21 @@
 </script>
 
 <Section title="Inputs">
-	<Sample title="input[type=text]" class="grid grid-cols-2 gap-2">
+	<Sample title="input[type=text]" class="grid grid-cols-2 gap-sm">
 		<input type="text" class="input" placeholder="default" />
 		<input type="text" class="input focus" placeholder="focus" />
 		<input type="text" class="input" value="filled" />
 		<input type="text" class="input" placeholder="disabled" disabled />
 	</Sample>
 
-	<Sample title="textarea" class="grid grid-cols-2 gap-2">
+	<Sample title="textarea" class="grid grid-cols-2 gap-sm">
 		<textarea class="input" placeholder="default" />
 		<textarea class="input focus" placeholder="focus" />
 		<textarea class="input">filled</textarea>
 		<textarea class="input" placeholder="disabled" disabled />
 	</Sample>
 
-	<Sample title="select" class="grid grid-cols-2 gap-2">
+	<Sample title="select" class="grid grid-cols-2 gap-sm">
 		<select class="input">
 			<option>select</option>
 		</select>
@@ -41,7 +41,7 @@
 </Section>
 
 <Section title="Checks">
-	<Sample class="grid grid-cols-2 gap-2">
+	<Sample class="grid grid-cols-2 gap-sm">
 		<div>
 			<input type="checkbox" class="check" />
 			<input type="checkbox" class="check focus" />

@@ -13,7 +13,7 @@ const btnSelected: CssInJs = (theme) => ({
 const button: CssInJs = (theme) => ({
     ".btn": {
         display: "inline-block",
-        padding: theme("padding.2"),
+        padding: theme("spacing.sm"),
         borderWidth: theme("borderWidth.DEFAULT"),
         borderColor: "transparent",
         borderRadius: theme("borderRadius.DEFAULT"),

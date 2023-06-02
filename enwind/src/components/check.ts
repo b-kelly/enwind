@@ -3,8 +3,8 @@ import type { CssInJs } from "../types";
 const check: CssInJs = (theme) => ({
     ".check": {
         accentColor: theme("colors.primary.DEFAULT"),
-        height: theme("height.4"),
-        width: theme("width.4"),
+        height: theme("spacing.md"),
+        width: theme("spacing.md"),
         outlineStyle: "solid",
         outlineWidth: "0",
         outlineColor: theme("colors.primary.focus"),

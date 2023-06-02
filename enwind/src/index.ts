@@ -3,6 +3,7 @@ import base from "./base";
 import components from "./components";
 import colors from "./colors";
 import type { Config } from "tailwindcss";
+import { utilities } from "./utilities";
 
 export interface EnwindOptions {
     // TODO remove others, like spacing?
@@ -23,6 +24,7 @@ export default plugin.withOptions<EnwindOptions>(
                     colors,
                 },
                 extend: {
+                    ...utilities,
                     colors: {
                         body: {
                             DEFAULT: "var(--_bw-color-body)",
@@ -50,6 +52,14 @@ export default plugin.withOptions<EnwindOptions>(
                 },
             },
         };
+
+        if (opts?.strict) {
+            config.theme!["colors"] = {};
+
+            Object.keys(utilities).map((k) => {
+                config.theme![k] = {};
+            });
+        }
 
         return config;
     }

@@ -5,7 +5,7 @@
 </script>
 
 <Section title="Buttons">
-	<Sample title=".btn" class="flex gap-2">
+	<Sample title=".btn" class="flex gap-sm">
 		<button type="button" class="btn">default</button>
 		<button type="button" class="btn hover">hover</button>
 		<button type="button" class="btn focus">focus</button>
@@ -13,7 +13,7 @@
 		<button type="button" class="btn" disabled>disabled</button>
 	</Sample>
 
-	<Sample title=".btn.btn-primary" class="flex gap-2">
+	<Sample title=".btn.btn-primary" class="flex gap-sm">
 		<button type="button" class="btn btn-primary">default</button>
 		<button type="button" class="btn btn-primary hover"> hover </button>
 		<button type="button" class="btn btn-primary focus"> focus </button>
@@ -21,7 +21,7 @@
 		<button type="button" class="btn btn-primary" disabled> disabled </button>
 	</Sample>
 
-	<Sample title=".btn.btn-icon" class="flex gap-2">
+	<Sample title=".btn.btn-icon" class="flex gap-sm">
 		<button type="button" class="btn btn-icon">
 			<Icon icon={'adjustments'} />
 		</button>

@@ -4,7 +4,7 @@
 </script>
 
 <Section title="Progress">
-	<Sample class="flex gap-4">
+	<Sample class="flex gap-md">
 		<div class="progress-circle" style="--value: 0">0%</div>
 		<div class="progress-circle" style="--value: 50">50%</div>
 		<div class="progress-circle" style="--value: 100">100%</div>
