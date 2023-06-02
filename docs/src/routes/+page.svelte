@@ -21,4 +21,7 @@
 	<li>
 		<a href="{base}/tables">Tables</a>
 	</li>
+	<li>
+		<a href="{base}/utilities">Utilities</a>
+	</li>
 </ul>
