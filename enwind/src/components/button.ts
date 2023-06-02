@@ -1,14 +1,5 @@
 import type { CssInJs } from "../types";
 
-const btnHover: CssInJs = (theme) => ({
-    backgroundColor: theme("colors.body.highlight"),
-    borderColor: theme("colors.body.highlight"),
-});
-
-const btnFocus: CssInJs = () => ({
-    outlineWidth: "2px", //TODO theme("outline.2"),
-});
-
 const btnSelected: CssInJs = (theme) => ({
     color: theme("colors.primary.content"),
     backgroundColor: theme("colors.primary.DEFAULT"),
@@ -30,8 +21,17 @@ const button: CssInJs = (theme) => ({
         outlineStyle: "solid",
         outlineWidth: "0",
         outlineColor: theme("colors.primary.DEFAULT"),
-        "&:hover,&.hover": btnHover(theme),
-        "&:focus, &:active, &.focus, &.active": btnFocus(theme),
+        "&:hover, &.hover": {
+            backgroundColor: theme("colors.body.highlight"),
+            borderColor: theme("colors.body.highlight"),
+        },
+        "&:focus-visible, &.focus": {
+            outlineWidth: theme("outlineWidth.2"),
+            boxShadow: `inset 0 0 0 1px ${theme("colors.body.DEFAULT")}`,
+        },
+        "&:active, &.active": {
+            transform: `scale(${theme("scale.95")})`,
+        },
         "&:disabled": {
             opacity: theme("opacity.60"),
             pointerEvents: "none",
