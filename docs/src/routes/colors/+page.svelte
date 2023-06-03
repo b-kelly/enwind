@@ -57,6 +57,6 @@
 
 <style>
 	.swatch {
-		@apply w-8 h-8 inline-block border;
+		@apply w-lg h-lg inline-block border;
 	}
 </style>
