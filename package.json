@@ -2,14 +2,14 @@
     "name": "enwind-monorepo",
     "private": "true",
     "workspaces": [
-        "enwind",
-        "docs"
+        "packages/*"
     ],
     "scripts": {
-        "dev": "npm run dev -w docs",
-        "build": "npm run build -w enwind"
+        "dev": "lerna run dev",
+        "build": "lerna run build"
     },
     "devDependencies": {
+        "lerna": "^6.6.2",
         "typescript": "^5.0.4"
     }
 }
