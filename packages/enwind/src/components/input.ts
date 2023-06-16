@@ -12,7 +12,7 @@ const input: CssInJs = (theme) => ({
         borderRadius: theme("borderRadius.DEFAULT"),
         borderWidth: theme("borderWidth.DEFAULT"),
         accentColor: theme("colors.primary.DEFAULT"),
-        "&:focus, &.focus": {
+        "&:focus, &:where(.focus)": {
             outlineWidth: theme("outlineWidth.sm"),
         },
         "&:disabled": {

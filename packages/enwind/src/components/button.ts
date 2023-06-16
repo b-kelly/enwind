@@ -21,15 +21,15 @@ const button: CssInJs = (theme) => ({
         outlineStyle: "solid",
         outlineWidth: "0",
         outlineColor: theme("colors.primary.DEFAULT"),
-        "&:hover, &.hover": {
+        "&:hover, &:where(.hover)": {
             backgroundColor: theme("colors.body.highlight"),
             borderColor: theme("colors.body.highlight"),
         },
-        "&:focus-visible, &.focus": {
+        "&:focus-visible, &:where(.focus)": {
             outlineWidth: theme("outlineWidth.sm"),
             boxShadow: `inset 0 0 0 1px ${theme("colors.body.DEFAULT")}`,
         },
-        "&:active, &.active": {
+        "&:active, &:where(.active)": {
             transform: `scale(${theme("scale.95")})`,
         },
         "&:disabled": {
@@ -37,10 +37,10 @@ const button: CssInJs = (theme) => ({
             pointerEvents: "none",
         },
     },
-    ".btn.btn-primary": {
+    ".btn-primary": {
         ...btnSelected(theme),
     },
-    ".btn.btn-icon": {
+    ".btn-icon": {
         borderColor: "transparent",
         display: "inline-flex",
         alignItems: "center",

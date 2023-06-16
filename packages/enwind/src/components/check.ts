@@ -13,7 +13,7 @@ const check: CssInJs = (theme) => ({
             cursor: "not-allowed",
             opacity: theme("opacity.disabled"),
         },
-        "&:focus, &.focus": {
+        "&:focus, &:where(.focus)": {
             outlineWidth: theme("outlineWidth.sm"),
         },
     },
