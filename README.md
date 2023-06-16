@@ -20,7 +20,12 @@ export default {
     theme: {
         extend: {},
     },
-    plugins: [enwind],
+    plugins: [
+        enwind({
+            // you can optionally enable strict mode to remove all non-enwind utility classes; defaults to `false`
+            strict: true,
+        }),
+    ],
 };
 ```
 
