@@ -1,5 +1,12 @@
 import { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
+import { PluginUtils } from "tailwindcss/types/config";
+
+// the default theme values are all callable, so cast them for code cleanliness
+type ResolvableTo = <T>(utils: PluginUtils) => T;
+const heightConf = defaultTheme.height as ResolvableTo;
+const maxHeightConf = defaultTheme.maxHeight as ResolvableTo;
+const widthConf = defaultTheme.width as ResolvableTo;
 
 /** Enwind specific theme config; values that match the default config are there for strict mode */
 export const utilities: NonNullable<Config["theme"]> = {
@@ -27,4 +34,18 @@ export const utilities: NonNullable<Config["theme"]> = {
     outlineWidth: {
         sm: defaultTheme.outlineWidth[2],
     },
+
+    // don't override the default height/width with the new spacing
+    height: (config) => ({
+        ...defaultTheme.spacing,
+        ...heightConf(config),
+    }),
+    maxHeight: (config) => ({
+        ...defaultTheme.spacing,
+        ...maxHeightConf(config),
+    }),
+    width: (config) => ({
+        ...defaultTheme.spacing,
+        ...widthConf(config),
+    }),
 };
