@@ -1,29 +1,33 @@
 import type { CssInJs } from "../types";
 
 const btnSelected: CssInJs = (theme) => ({
-    color: theme("colors.primary.content"),
-    backgroundColor: theme("colors.primary.DEFAULT"),
-    borderColor: theme("colors.primary.focus"),
-    "&:hover": {
-        backgroundColor: theme("colors.primary.focus"),
-        borderColor: theme("colors.primary.focus"),
+    "--_btn-fc": theme("colors.primary.content"),
+    "--_btn-bg": theme("colors.primary.DEFAULT"),
+    "--_btn-border": theme("colors.primary.focus"),
+    "&:hover, &:where(.hover)": {
+        "--_btn-bg": theme("colors.primary.focus"),
+        "--_btn-border": theme("colors.primary.focus"),
     },
 });
 
 const button: CssInJs = (theme) => ({
     ".btn": {
+        "--_btn-bg": "transparent",
+        "--_btn-fc": theme("colors.primary.DEFAULT"),
+        "--_btn-border": "transparent",
         display: "inline-block",
         padding: theme("spacing.sm"),
+        backgroundColor: "var(--_btn-bg)",
         borderWidth: theme("borderWidth.DEFAULT"),
-        borderColor: "transparent",
+        borderColor: "var(--_btn-border)",
         borderRadius: theme("borderRadius.DEFAULT"),
-        color: theme("colors.primary.DEFAULT"),
+        color: "var(--_btn-fc)",
         outlineStyle: "solid",
         outlineWidth: "0",
         outlineColor: theme("colors.primary.DEFAULT"),
         "&:hover, &:where(.hover)": {
-            backgroundColor: theme("colors.body.highlight"),
-            borderColor: theme("colors.body.highlight"),
+            "--_btn-bg": theme("colors.body.highlight"),
+            "--_btn-border": theme("colors.body.highlight"),
         },
         "&:focus-visible, &:where(.focus)": {
             outlineWidth: theme("outlineWidth.sm"),
@@ -41,7 +45,7 @@ const button: CssInJs = (theme) => ({
         ...btnSelected(theme),
     },
     ".btn-icon": {
-        borderColor: "transparent",
+        "--_btn-border": "transparent",
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
