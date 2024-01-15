@@ -23,3 +23,5 @@ packages/enwind/README.md
 *.njsproj
 *.sln
 *.sw?
+
+.nx/cache

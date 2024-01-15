@@ -1,33 +1,33 @@
 {
-    "name": "enwind",
-    "version": "0.3.1",
-    "type": "module",
-    "main": "./dist/plugin.umd.cjs",
-    "module": "./dist/plugin.js",
-    "types": "./dist",
-    "files": [
-        "src/**/*",
-        "dist/**/*"
-    ],
-    "scripts": {
-        "dev": "npm run build -- --watch",
-        "build": "vite build -c vite.plugin.js",
-        "preview": "vite preview",
-        "prepublishOnly": "npm run build && copyfiles ../../README.md ./enwind/README.md"
-    },
-    "devDependencies": {
-        "autoprefixer": "^10.4.14",
-        "copyfiles": "^2.4.1",
-        "postcss": "^8.4.21",
-        "typescript": "^5.0.4",
-        "vite": "^4.2.1",
-        "vite-plugin-dts": "^2.3.0"
-    },
-    "dependencies": {
-        "tailwindcss": "^3.3.1"
-    },
-    "peerDependencies": {
-        "autoprefixer": "^10.4.13",
-        "postcss": "^8.4.21"
-    }
+  "name": "enwind",
+  "version": "0.3.1",
+  "type": "module",
+  "main": "./dist/plugin.umd.cjs",
+  "module": "./dist/plugin.js",
+  "types": "./dist",
+  "files": [
+    "src/**/*",
+    "dist/**/*"
+  ],
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "build": "vite build -c vite.plugin.js",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build && copyfiles ../../README.md ./enwind/README.md"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "copyfiles": "^2.4.1",
+    "postcss": "^8.4.21",
+    "typescript": "^5.0.4",
+    "vite": "^4.2.1",
+    "vite-plugin-dts": "^2.3.0"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.3.1"
+  },
+  "peerDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21"
+  }
 }

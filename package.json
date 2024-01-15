@@ -1,16 +1,16 @@
 {
-    "name": "enwind-monorepo",
-    "private": "true",
-    "workspaces": [
-        "packages/*"
-    ],
-    "scripts": {
-        "dev": "lerna run dev",
-        "build": "lerna run build",
-        "version": "lerna version --no-private"
-    },
-    "devDependencies": {
-        "lerna": "^6.6.2",
-        "typescript": "^5.0.4"
-    }
+  "name": "enwind-monorepo",
+  "private": "true",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "lerna run dev",
+    "build": "lerna run build",
+    "version": "lerna version --no-private"
+  },
+  "devDependencies": {
+    "lerna": "^8.0.2",
+    "typescript": "^5.0.4"
+  }
 }
