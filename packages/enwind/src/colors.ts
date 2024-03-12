@@ -6,6 +6,7 @@ export default {
             DEFAULT: c.white,
             content: c.gray["900"],
             highlight: c.neutral["200"],
+            overlay: "rgb(0 0 0 / 0.5)", // TODO color choice,
         },
         primary: {
             DEFAULT: c.indigo["500"],
@@ -30,6 +31,7 @@ export default {
             DEFAULT: c.slate["900"],
             content: c.white,
             highlight: c.slate["600"],
+            overlay: "rgb(0 0 0 / 0.5)", // TODO copied from light mode
         },
         primary: {
             DEFAULT: c.teal["500"],

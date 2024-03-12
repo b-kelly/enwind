@@ -12,6 +12,7 @@ const css: CssInJs = (theme) => {
         "--_bw-color-body": enwind("body.DEFAULT", mode),
         "--_bw-color-body-content": enwind("body.content", mode),
         "--_bw-color-body-highlight": enwind("body.highlight", mode),
+        "--_bw-color-body-overlay": enwind("body.overlay", mode),
 
         "--_bw-color-success": enwind("success.DEFAULT", mode),
         "--_bw-color-success-focus": enwind("success.focus", mode),

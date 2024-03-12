@@ -10,7 +10,7 @@ const modal: CssInJs = (theme) => ({
         display: "none",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "rgb(0 0 0 / 0.5)", // TODO add to colors?
+        backgroundColor: theme("colors.overlay.DEFAULT"),
         backdropFilter: "blur(8px)",
         "&.visible": {
             display: "flex",

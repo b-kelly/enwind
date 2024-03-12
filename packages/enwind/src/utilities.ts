@@ -48,4 +48,10 @@ export const utilities: NonNullable<Config["theme"]> = {
         ...defaultTheme.spacing,
         ...widthConf(config),
     }),
+    zIndex: () => ({
+        ...defaultTheme.zIndex,
+        base: "0",
+        drawer: "500",
+        modal: "1000",
+    }),
 };

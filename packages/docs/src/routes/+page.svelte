@@ -1,27 +1,5 @@
-<script>
-	import { base } from '$app/paths';
-</script>
-
-<ul>
-	<li>
-		<a href="{base}/colors">Colors</a>
-	</li>
-	<li>
-		<a href="{base}/buttons">Buttons</a>
-	</li>
-	<li>
-		<a href="{base}/inputs">Inputs</a>
-	</li>
-	<li>
-		<a href="{base}/modals">Modals</a>
-	</li>
-	<li>
-		<a href="{base}/progress">Progress</a>
-	</li>
-	<li>
-		<a href="{base}/tables">Tables</a>
-	</li>
-	<li>
-		<a href="{base}/utilities">Utilities</a>
-	</li>
-</ul>
+<div class="flex flex-col gap-sm text-center">
+	<h1 class="text-2xl">A component library for personal use.</h1>
+	<p>These docs aren't fancy, because I'm the only one looking at them.</p>
+	<p>If you like enwind and would like to see improvements, consider opening a PR.</p>
+</div>

@@ -1,6 +1,6 @@
 import type { PageServerLoad } from './$types';
 import resolveConfig from 'tailwindcss/resolveConfig';
-import tailwindConfig from '../../../tailwind.config';
+import tailwindConfig from '../../../../tailwind.config';
 
 export const load: PageServerLoad = () => {
 	const fullConfig = resolveConfig(tailwindConfig);

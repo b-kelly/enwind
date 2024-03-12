@@ -2,8 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-	body {
-		@apply p-md min-h-full;
-	}
+html,
+body {
+	@apply h-full overflow-hidden;
+}
+
+/* TODO add to enwind -> base */
+::-webkit-scrollbar {
+	@apply w-sm;
+	@apply h-sm;
+}
+
+::-webkit-scrollbar-track {
+	@apply px-px;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply rounded bg-primary;
 }

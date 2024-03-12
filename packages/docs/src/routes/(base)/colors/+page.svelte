@@ -17,6 +17,13 @@
 			<span>colors.body.highlight</span>
 		</div>
 		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-body-overlay" />
+			<span>colors.body.overlay</span>
+		</div>
+
+		<hr class="col-span-2" />
+
+		<div class="flex ai-center gap-sm">
 			<span class="swatch bg-primary" />
 			<span>colors.primary</span>
 		</div>
@@ -28,6 +35,9 @@
 			<span class="swatch bg-primary-focus" />
 			<span>colors.primary.focus</span>
 		</div>
+
+		<hr class="col-span-2" />
+
 		<div class="flex ai-center gap-sm">
 			<span class="swatch bg-success" />
 			<span>colors.success</span>

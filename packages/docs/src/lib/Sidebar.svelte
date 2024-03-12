@@ -1,0 +1,38 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+	import Icon from './Icon.svelte';
+
+	const menu: {
+		title: string;
+		items: string[];
+	}[] = [
+		{
+			title: 'Base',
+			items: ['Colors', 'Utilities']
+		},
+		{
+			title: 'Components',
+			items: ['Buttons', 'Inputs', 'Modals', 'Progress', 'Tables']
+		}
+	];
+
+	function link(url: string) {
+		return `${base}/${url.toLocaleLowerCase()}`;
+	}
+</script>
+
+<div class="flex flex-col gap-md {$$props.class}">
+	<a href="{base}/">Home</a>
+	{#each menu as cat}
+		<div>
+			<h2 class="text-xl mb-xs">{cat.title}</h2>
+			<ul>
+				{#each cat.items as item}
+					<li>
+						<a href={link(item)}>{item}</a>
+					</li>
+				{/each}
+			</ul>
+		</div>
+	{/each}
+</div>

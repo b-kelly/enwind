@@ -30,6 +30,7 @@ export default plugin.withOptions<EnwindOptions>(
                             DEFAULT: "var(--_bw-color-body)",
                             content: "var(--_bw-color-body-content)",
                             highlight: "var(--_bw-color-body-highlight)",
+                            overlay: "var(--_bw-color-body-overlay)",
                         },
                         primary: {
                             DEFAULT: "var(--_bw-color-primary)",
