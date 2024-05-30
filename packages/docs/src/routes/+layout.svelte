@@ -19,7 +19,7 @@
 	});
 </script>
 
-<Drawer class="lg:hidden">
+<Drawer id="sidebar-drawer" class="lg:hidden">
 	<Sidebar class="p-md flex" />
 </Drawer>
 
