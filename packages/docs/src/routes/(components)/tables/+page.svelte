@@ -4,7 +4,25 @@
 </script>
 
 <Section title="Tables">
-	<Sample>
+	<Sample
+		content={`<table class="table">
+	<thead>
+		<tr>
+			<th>Column 1</th>
+			<th>Column 2</th>
+			<th>Column 3</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Foo 1</td>
+			<td>Foo 2</td>
+			<td>Foo 3</td>
+		</tr>
+		...
+	</tbody>
+</table>`}
+	>
 		<table class="table">
 			<thead>
 				<tr>

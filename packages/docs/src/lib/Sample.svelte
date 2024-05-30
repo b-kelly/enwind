@@ -4,21 +4,17 @@
 	let className = '';
 	export { className as class };
 
-	let childContent: HTMLElement | undefined;
-	$: innerContent = childContent?.innerHTML
-		.replace(/<!--.+?-->/g, '')
-		.replace(/<span class="icon.+?<\/span>/gs, '<Icon/>')
-		.replace(/>\s*?</g, '>\n<');
+	export let content: string;
 </script>
 
-<div class="flex flex-col gap-sm">
+<div class="flex flex-col gap-sm border border-body-highlight rounded">
 	{#if title}
-		<h3 class="text-xl font-mono">{title}</h3>
+		<h3 class="p-sm text-xl font-mono">{title}</h3>
 	{/if}
-	<div class={className || 'contents'} bind:this={childContent}>
+	<div class="p-sm {className}">
 		<slot />
 	</div>
-	<pre>{innerContent}</pre>
+	<pre>{content}</pre>
 </div>
 
 <style>
