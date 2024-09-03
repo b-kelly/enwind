@@ -24,6 +24,7 @@ export const utilities: NonNullable<Config["theme"]> = {
     borderRadius: {
         DEFAULT: defaultTheme.borderRadius.DEFAULT,
         full: defaultTheme.borderRadius.full,
+        none: defaultTheme.borderRadius.none,
     },
     borderWidth: {
         DEFAULT: defaultTheme.borderWidth.DEFAULT,
