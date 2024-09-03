@@ -30,6 +30,17 @@ const input: CssInJs = (theme) => ({
             lineHeight: theme("lineHeight.tight"),
         },
     },
+    ".form-check": {
+        display: "flex",
+        alignItems: "center",
+        gap: theme("gap.xs"),
+        padding: `${theme("spacing.xs")} ${theme("spacing.sm")}`,
+    },
+    ".form-inline": {
+        display: "flex",
+        alignItems: "center",
+        gap: theme("gap.sm"),
+    },
 });
 
 export default input;

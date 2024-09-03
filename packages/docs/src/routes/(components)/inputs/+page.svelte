@@ -41,20 +41,6 @@
 	</Sample>
 </Section>
 
-<Section title="Form groups">
-	<Sample
-		content={`<div class="form-group">
-	<label for="fg-example-1">Foo label</label>
-	<input id="fg-example-1" type="text" class="input" />
-</div>`}
-	>
-		<div class="form-group">
-			<label for="fg-example-1">Foo label</label>
-			<input id="fg-example-1" type="text" class="input" />
-		</div>
-	</Sample>
-</Section>
-
 <Section title="Checks">
 	<Sample
 		class="grid grid-cols-2 gap-sm"
@@ -77,6 +63,61 @@
 			<input type="radio" class="check" checked />
 			<input type="radio" class="check" disabled />
 			<input type="radio" class="check" checked disabled />
+		</div>
+	</Sample>
+</Section>
+
+<Section title="Layout">
+	<Sample
+		title=".form-group"
+		content={`<div class="form-group">
+	<label for="fg-example-1">Foo label</label>
+	<input id="fg-example-1" type="text" class="input" />
+</div>`}
+	>
+		<div class="form-group">
+			<label for="fg-example-1">Foo label</label>
+			<input id="fg-example-1" type="text" class="input" />
+		</div>
+	</Sample>
+
+	<Sample
+		title=".form-check"
+		content={`<div class="form-check">
+	<input id="fc-example-1" type="checkbox" class="check" />
+	<label for="fc-example-1">Foo label</label>
+</div>`}
+	>
+		<div class="form-check">
+			<input id="fc-example-1" type="checkbox" class="check" />
+			<label for="fc-example-1">Foo label</label>
+		</div>
+	</Sample>
+
+	<Sample
+		title=".form-inline"
+		content={`<form class="form-inline">
+	<div class="form-check">
+		<input id="fi-example-1" type="checkbox" class="check" />
+		<label for="fi-example-1">Foo label</label>
+	</div>
+
+	<div class="form-group">
+		<label for="fi-example-2">Foo label</label>
+		<input id="fi-example-2" type="text" class="input" />
+	</div>
+</div>`}
+	>
+		<div class="form-inline">
+			<div class="form-check">
+				<input id="fi-example-1" type="checkbox" class="check" />
+				<label for="fi-example-1">Check label</label>
+			</div>
+
+			<div class="form-group">
+				<label for="fi-example-2">Input label</label>
+				<input id="fi-example-2" type="text" class="input" />
+			</div>
 		</div>
 	</Sample>
 </Section>
