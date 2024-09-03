@@ -28,6 +28,7 @@
 		<nav class="flex items-center mb-4 p-md gap-sm">
 			<button class="btn lg:hidden" on:click={() => drawerStore.open()}>
 				<Icon icon="bars3"></Icon>
+				<span class="sr-only">Menu</span>
 			</button>
 			<h1 class="text-3xl font-bold"><a href={base || '/'}>enwind</a></h1>
 			<button
