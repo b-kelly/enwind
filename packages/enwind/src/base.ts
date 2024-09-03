@@ -10,7 +10,9 @@ const css: CssInJs = (theme) => {
         "--_bw-color-primary-focus": enwind("primary.focus", mode),
 
         "--_bw-color-body": enwind("body.DEFAULT", mode),
-        "--_bw-color-body-content": enwind("body.content", mode),
+        "--_bw-color-body-content": enwind("body.content.DEFAULT", mode),
+        "--_bw-color-body-content-light": enwind("body.content.light", mode),
+        "--_bw-color-body-content-dark": enwind("body.content.dark", mode),
         "--_bw-color-body-highlight": enwind("body.highlight", mode),
         "--_bw-color-body-overlay": enwind("body.overlay", mode),
 
@@ -46,7 +48,7 @@ const css: CssInJs = (theme) => {
     const base = {
         body: {
             backgroundColor: theme("colors.body.DEFAULT", null),
-            color: theme("colors.body.content", null),
+            color: theme("colors.body.content.DEFAULT", null),
         },
         a: {
             color: theme("colors.primary.DEFAULT", null),

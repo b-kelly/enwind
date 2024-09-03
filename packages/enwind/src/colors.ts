@@ -4,7 +4,11 @@ export default {
     light: {
         body: {
             DEFAULT: c.white,
-            content: c.gray["900"],
+            content: {
+                DEFAULT: c.gray["800"],
+                light: c.gray["700"],
+                dark: c.black,
+            },
             highlight: c.neutral["200"],
             overlay: "rgb(0 0 0 / 0.5)", // TODO color choice,
         },
@@ -29,7 +33,11 @@ export default {
     dark: {
         body: {
             DEFAULT: c.slate["900"],
-            content: c.white,
+            content: {
+                DEFAULT: c.gray["200"],
+                light: c.gray["300"],
+                dark: c.white,
+            },
             highlight: c.slate["600"],
             overlay: "rgb(0 0 0 / 0.5)", // TODO copied from light mode
         },
