@@ -12,7 +12,7 @@
 		},
 		{
 			title: 'Components',
-			items: ['Buttons', 'Inputs', 'Modals', 'Progress', 'Tables']
+			items: ['Buttons', 'Inputs', 'Modals', 'Progress', 'Spinner', 'Tables']
 		}
 	];
 

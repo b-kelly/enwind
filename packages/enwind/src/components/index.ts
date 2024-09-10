@@ -5,6 +5,7 @@ import check from "./check";
 import input from "./input";
 import modal from "./modal";
 import progress from "./progress";
+import spinner from "./spinner";
 import table from "./table";
 
 const components: CssInJs = (theme) => ({
@@ -14,6 +15,7 @@ const components: CssInJs = (theme) => ({
     ...input(theme),
     ...modal(theme),
     ...progress(theme),
+    ...spinner(theme),
     ...table(theme),
 });
 
