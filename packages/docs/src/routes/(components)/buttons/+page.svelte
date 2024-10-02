@@ -9,7 +9,8 @@
 		title=".btn"
 		class="flex gap-sm"
 		content={`<button type="button" class="btn">default</button>
-<button type="button" class="btn" disabled>default</button>`}
+<button type="button" class="btn" disabled>default</button>
+<a href="..." class="btn">link</a>`}
 	>
 		<button type="button" class="btn">default</button>
 		<button type="button" class="btn hover">hover</button>
@@ -22,7 +23,8 @@
 		title=".btn.btn-primary"
 		class="flex gap-sm"
 		content={`<button type="button" class="btn btn-primary">primary</button>
-<button type="button" class="btn btn-primary" disabled>primary</button>`}
+<button type="button" class="btn btn-primary" disabled>primary</button>
+<a href="..." class="btn btn-primary">link</a>`}
 	>
 		<button type="button" class="btn btn-primary">default</button>
 		<button type="button" class="btn btn-primary hover">hover</button>
@@ -35,7 +37,8 @@
 		title=".btn.btn-icon"
 		class="flex gap-sm"
 		content={`<button type="button" class="btn btn-icon"><Icon/></button>
-<button type="button" class="btn btn-icon" disabled><Icon/></button>`}
+<button type="button" class="btn btn-icon" disabled><Icon/></button>
+<a href="..." class="btn btn-icon">link</a>`}
 	>
 		<button type="button" class="btn btn-icon">
 			<Icon icon={'adjustments'} />

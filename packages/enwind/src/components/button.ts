@@ -28,13 +28,16 @@ const button: CssInJs = (theme) => ({
         "&:hover, &:where(.hover)": {
             "--_btn-bg": theme("colors.body.highlight"),
             "--_btn-border": theme("colors.body.highlight"),
+            color: "var(--_btn-fc)",
         },
         "&:focus-visible, &:where(.focus)": {
             outlineWidth: theme("outlineWidth.sm"),
             boxShadow: `inset 0 0 0 1px ${theme("colors.body.DEFAULT")}`,
+            color: "var(--_btn-fc)",
         },
         "&:active, &:where(.active)": {
             transform: `scale(${theme("scale.95")})`,
+            color: "var(--_btn-fc)",
         },
         "&:disabled": {
             opacity: theme("opacity.disabled"),
