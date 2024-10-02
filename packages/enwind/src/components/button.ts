@@ -56,6 +56,12 @@ const button: CssInJs = (theme) => ({
         borderRadius: theme("borderRadius.full"),
         gap: theme("gap.sm"),
     },
+    ".btn-outline": {
+        "--_btn-border": "currentColor",
+        "&:hover, &:where(.hover)": {
+            "--_btn-border": "currentColor",
+        },
+    },
 });
 
 export default button;

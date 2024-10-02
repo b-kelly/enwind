@@ -20,6 +20,20 @@
 	</Sample>
 
 	<Sample
+		title=".btn.btn-outline"
+		class="flex gap-sm"
+		content={`<button type="button" class="btn btn-outline">primary</button>
+<button type="button" class="btn btn-outline" disabled>primary</button>
+<a href="..." class="btn btn-outline">link</a>`}
+	>
+		<button type="button" class="btn btn-outline">default</button>
+		<button type="button" class="btn btn-outline hover">hover</button>
+		<button type="button" class="btn btn-outline focus">focus</button>
+		<button type="button" class="btn btn-outline active">active</button>
+		<button type="button" class="btn btn-outline" disabled> disabled </button>
+	</Sample>
+
+	<Sample
 		title=".btn.btn-primary"
 		class="flex gap-sm"
 		content={`<button type="button" class="btn btn-primary">primary</button>
