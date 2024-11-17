@@ -1,6 +1,11 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import Icon from './Icon.svelte';
+	interface Props {
+		[key: string]: any
+	}
+
+	let { ...props }: Props = $props();
 
 	const menu: {
 		title: string;
@@ -21,7 +26,7 @@
 	}
 </script>
 
-<div class="flex flex-col gap-md {$$props.class}">
+<div class="flex flex-col gap-md {props.class}">
 	<a href="{base}/">Home</a>
 	{#each menu as cat}
 		<div>

@@ -5,69 +5,69 @@
 <Section title="Colors">
 	<div class="grid grid-cols-2 gap-sm font-mono">
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-body" />
+			<span class="swatch bg-body"></span>
 			<span>colors.body</span>
 		</div>
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-body-content" />
+			<span class="swatch bg-body-content"></span>
 			<span>colors.body.content</span>
 		</div>
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-body-content-light" />
+			<span class="swatch bg-body-content-light"></span>
 			<span>colors.body.content.light</span>
 		</div>
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-body-content-dark" />
+			<span class="swatch bg-body-content-dark"></span>
 			<span>colors.body.content.dark</span>
 		</div>
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-body-highlight" />
+			<span class="swatch bg-body-highlight"></span>
 			<span>colors.body.highlight</span>
 		</div>
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-body-overlay" />
+			<span class="swatch bg-body-overlay"></span>
 			<span>colors.body.overlay</span>
 		</div>
 
 		<hr class="col-span-2" />
 
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-primary" />
+			<span class="swatch bg-primary"></span>
 			<span>colors.primary</span>
 		</div>
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-primary-content" />
+			<span class="swatch bg-primary-content"></span>
 			<span>colors.primary.content</span>
 		</div>
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-primary-focus" />
+			<span class="swatch bg-primary-focus"></span>
 			<span>colors.primary.focus</span>
 		</div>
 
 		<hr class="col-span-2" />
 
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-success" />
+			<span class="swatch bg-success"></span>
 			<span>colors.success</span>
 		</div>
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-success-focus" />
+			<span class="swatch bg-success-focus"></span>
 			<span>colors.success.focus</span>
 		</div>
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-warn" />
+			<span class="swatch bg-warn"></span>
 			<span>colors.warn</span>
 		</div>
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-warn-focus" />
+			<span class="swatch bg-warn-focus"></span>
 			<span>colors.warn.focus</span>
 		</div>
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-danger" />
+			<span class="swatch bg-danger"></span>
 			<span>colors.danger</span>
 		</div>
 		<div class="flex ai-center gap-sm">
-			<span class="swatch bg-danger-focus" />
+			<span class="swatch bg-danger-focus"></span>
 			<span>colors.danger.focus</span>
 		</div>
 	</div>

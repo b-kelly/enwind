@@ -16,10 +16,10 @@
 	</Sample>
 
 	<Sample title="textarea" class="grid grid-cols-2 gap-sm" content={`<textarea class="input" />`}>
-		<textarea class="input" placeholder="default" />
-		<textarea class="input focus" placeholder="focus" />
+		<textarea class="input" placeholder="default"></textarea>
+		<textarea class="input focus" placeholder="focus"></textarea>
 		<textarea class="input">filled</textarea>
-		<textarea class="input" placeholder="disabled" disabled />
+		<textarea class="input" placeholder="disabled" disabled></textarea>
 	</Sample>
 
 	<Sample

@@ -12,7 +12,11 @@
 		xmark
 	} as const;
 
-	export let icon: keyof typeof icons;
+	interface Props {
+		icon: keyof typeof icons;
+	}
+
+	let { icon }: Props = $props();
 </script>
 
 <Icon icon={icons[icon]} />
