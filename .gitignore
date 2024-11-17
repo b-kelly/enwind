@@ -25,3 +25,4 @@ packages/enwind/README.md
 *.sw?
 
 .nx/cache
+.nx/workspace-data
