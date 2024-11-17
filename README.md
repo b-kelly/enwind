@@ -7,13 +7,13 @@ A simple design system written for use in my personal projects. I had a set of T
 ## Usage
 
 ```bash
-npm install enwind
+npm install @enwindui/enwind
 ```
 
 Add the plugin to your `tailwind.config.js` file:
 
 ```js
-import enwind from "enwind";
+import enwind from "@enwindui/enwind";
 
 export default {
     // ...

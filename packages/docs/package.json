@@ -1,5 +1,5 @@
 {
-	"name": "@enwind/docs",
+	"name": "@enwindui/docs",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -36,8 +36,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@enwind/svelte": "*",
-		"enwind": "*",
+		"@enwindui/svelte": "*",
+		"@enwindui/enwind": "*",
 		"heroicons": "^2.1.3"
 	}
 }

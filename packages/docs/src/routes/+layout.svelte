@@ -1,5 +1,5 @@
 <script>
-	import { AppLayout, Drawer, initializeStores, getDrawerStore } from '@enwind/svelte';
+	import { AppLayout, Drawer, initializeStores, getDrawerStore } from '@enwindui/svelte';
 	import { base } from '$app/paths';
 	import Icon from '$lib/Icon.svelte';
 	import Sidebar from '$lib/Sidebar.svelte';

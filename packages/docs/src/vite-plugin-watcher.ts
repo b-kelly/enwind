@@ -33,6 +33,6 @@ export default function enwindPluginWatcher(): Plugin {
 }
 
 async function build(startTime: number) {
-	await execAsync('npm run build -w enwind');
+	await execAsync('npm run build -w @enwindui/enwind');
 	console.log(`[Enwind]: Completed in ${Date.now() - startTime}ms`);
 }
