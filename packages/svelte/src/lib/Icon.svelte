@@ -1,11 +1,19 @@
 <script lang="ts">
-    export let icon: string;
+	interface Props {
+		icon: string;
+		[key: string]: unknown;
+	}
+
+	let { icon, ...rest }: Props = $props();
 </script>
 
-<span class="icon" {...$$restProps}>{@html icon}</span>
+<span class="icon" {...rest}>
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html icon}
+</span>
 
 <style>
 	.icon {
-		@apply inline-block h-[20px] w-[20px] text-[0] align-bottom;
+		@apply inline-block h-[20px] w-[20px] align-bottom text-[0];
 	}
 </style>

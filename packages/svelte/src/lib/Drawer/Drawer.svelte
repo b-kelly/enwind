@@ -2,10 +2,16 @@
 	import { onMount } from 'svelte';
 	import { getDrawerStore } from './store.js';
 
-	export let id: string = '';
+	interface Props {
+		id: string;
+		children?: import('svelte').Snippet;
+		[key: string]: unknown;
+	}
+
+	const { id = '', children, ...props }: Props = $props();
 
 	const store = getDrawerStore();
-	let backdrop: HTMLElement;
+	let backdrop: HTMLElement | undefined = $state();
 
 	onMount(() => {
 		store.register(id);
@@ -27,17 +33,17 @@
 <svelte:window on:keydown={onEscape} />
 
 {#if $store[id]}
-	<!-- svelte-ignore a11y-no-static-element-interactions -->
+	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
 		{id}
 		bind:this={backdrop}
-		class="drawer {$$props.class}"
-		on:click={interact}
-		on:keydown={onEscape}
+		class="drawer {props.class}"
+		onclick={interact}
+		onkeydown={onEscape}
 		aria-expanded={$store[id]}
 	>
-		<div class="drawer-contents {$$props.class}" role="dialog" aria-modal="true">
-			<slot />
+		<div class="drawer-contents {props.class}" role="dialog" aria-modal="true">
+			{@render children?.()}
 		</div>
 	</div>
 {/if}

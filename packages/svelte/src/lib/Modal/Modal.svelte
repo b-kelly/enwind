@@ -4,10 +4,18 @@
 	import Icon from '$lib/Icon.svelte';
 	import xmark from 'heroicons/20/solid/x-mark.svg?raw';
 
-	export let id: string = '';
+	interface Props {
+		id: string;
+		title?: import('svelte').Snippet;
+		body?: import('svelte').Snippet;
+		footer?: import('svelte').Snippet;
+		[key: string]: unknown;
+	}
+
+	const { id = '', title, body, footer, ...props }: Props = $props();
 
 	const store = getModalStore();
-	let backdrop: HTMLElement;
+	let backdrop: HTMLElement | undefined = $state();
 
 	onMount(() => {
 		store.register(id);
@@ -28,27 +36,27 @@
 
 <svelte:window on:keydown={onEscape} />
 
-<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <aside
 	class="modal"
 	class:visible={$store[id]}
 	{id}
 	bind:this={backdrop}
-	on:click={interact}
-	on:keydown={onEscape}
+	onclick={interact}
+	onkeydown={onEscape}
 >
-	<div class="modal-dialog {$$props.class}" role="dialog" aria-modal="true">
+	<div class="modal-dialog {props.class}" role="dialog" aria-modal="true">
 		<header class="modal-title">
-			<slot name="title"></slot>
-			<button type="button" class="btn btn-icon text-current" on:click={() => store.close(id)}>
+			{@render title?.()}
+			<button type="button" class="btn btn-icon text-current" onclick={() => store.close(id)}>
 				<Icon title="Close" icon={xmark} />
 			</button>
 		</header>
 		<section class="modal-body">
-			<slot name="body"></slot>
+			{@render body?.()}
 		</section>
 		<footer class="modal-footer">
-			<slot name="footer"></slot>
+			{@render footer?.()}
 		</footer>
 	</div>
 </aside>
