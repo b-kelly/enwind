@@ -1,10 +1,11 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	import { onMount } from 'svelte';
 	import { getDrawerStore } from './store.js';
 
 	interface Props {
 		id: string;
-		children?: import('svelte').Snippet;
+		children?: Snippet;
 		[key: string]: unknown;
 	}
 

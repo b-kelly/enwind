@@ -1,12 +1,17 @@
-<script>
-	import { AppLayout, Drawer, initializeStores, getDrawerStore } from '@enwindui/svelte';
+<script lang="ts">
+	import { onNavigate } from '$app/navigation';
 	import { base } from '$app/paths';
 	import Icon from '$lib/Icon.svelte';
 	import Sidebar from '$lib/Sidebar.svelte';
+	import { AppLayout, Drawer, getDrawerStore, initializeStores } from '@enwindui/svelte';
+	import type { Snippet } from 'svelte';
 	import '../app.css';
-	import { onNavigate } from '$app/navigation';
-	/** @type {{children?: import('svelte').Snippet}} */
-	let { children } = $props();
+
+	interface Props {
+		children: Snippet;
+	}
+
+	let { children }: Props = $props();
 
 	initializeStores();
 

@@ -1,14 +1,15 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { getModalStore } from './store.js';
 	import Icon from '$lib/Icon.svelte';
 	import xmark from 'heroicons/20/solid/x-mark.svg?raw';
+	import type { Snippet } from 'svelte';
+	import { onMount } from 'svelte';
+	import { getModalStore } from './store.js';
 
 	interface Props {
 		id: string;
-		title?: import('svelte').Snippet;
-		body?: import('svelte').Snippet;
-		footer?: import('svelte').Snippet;
+		title?: Snippet;
+		body?: Snippet;
+		footer?: Snippet;
 		[key: string]: unknown;
 	}
 
