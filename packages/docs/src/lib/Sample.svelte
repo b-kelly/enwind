@@ -26,9 +26,3 @@
 			>{@html hljs.highlight(content, { language: 'html' }).value}</code
 		></pre>
 </div>
-
-<style>
-	pre {
-		@apply font-mono p-sm max-w-full overflow-auto;
-	}
-</style>

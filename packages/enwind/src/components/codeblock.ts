@@ -6,10 +6,10 @@ const codeblock: CssInJs = (theme) => ({
         borderRadius: theme("borderRadius.DEFAULT"),
         color: theme("colors.code.DEFAULT"),
         display: "block",
-        "overflow-x": "auto",
+        "font-family": theme("fontFamily.mono"),
+        "max-width": "100%",
         overflow: "auto",
-        padding: "0.5em",
-        width: "100%",
+        padding: theme("spacing.sm"),
 
         ".hljs-subst, .hljs-formula, .hljs-attr, .hljs-property, .hljs-params":
             {
