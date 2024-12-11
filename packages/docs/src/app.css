@@ -4,7 +4,11 @@
 
 html,
 body {
-	@apply h-full overflow-hidden;
+	@apply h-full;
+}
+
+body {
+	@apply min-h-full;
 }
 
 /* TODO add to enwind -> base */

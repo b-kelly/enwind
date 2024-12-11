@@ -4,32 +4,63 @@
 		sidebar?: import('svelte').Snippet;
 		children?: import('svelte').Snippet;
 		footer?: import('svelte').Snippet;
-		[key: string]: unknown;
+		class?: string;
 	}
 
 	let { ...props }: Props = $props();
 </script>
 
-<div class="flex h-full w-full flex-col overflow-hidden {props.class}">
+<div class="main-container {props.class}">
 	{#if props.header}
-		<header class="z-10 flex-none">{@render props.header?.()}</header>
+		<header class="px-md">{@render props.header?.()}</header>
 	{/if}
 
-	<div class="flex h-full w-full flex-auto overflow-hidden">
-		{#if props.sidebar}
-			<aside class="w-auto flex-none overflow-y-auto overflow-x-hidden">
-				{@render props.sidebar?.()}
-			</aside>
-		{/if}
-
-		<div class="flex flex-1 flex-col overflow-x-hidden">
-			<main class="flex-auto">{@render props.children?.()}</main>
-
-			{#if props.footer}
-				<footer class="flex-none">
-					{@render props.footer?.()}
-				</footer>
+	<div class="content">
+		<div class="gap-lg mx-auto flex w-full max-w-screen-lg">
+			{#if props.sidebar}
+				<aside class="sidebar">
+					{@render props.sidebar?.()}
+				</aside>
 			{/if}
+
+			<main class="flex-1">{@render props.children?.()}</main>
 		</div>
+
+		{#if props.footer}
+			<footer class="px-md">
+				{@render props.footer?.()}
+			</footer>
+		{/if}
 	</div>
 </div>
+
+<style>
+	.main-container {
+		@apply grid h-screen w-screen;
+
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr;
+		grid-template-areas: 'header' 'main';
+	}
+
+	header {
+		grid-area: header;
+	}
+
+	.content {
+		@apply px-md grid overflow-auto;
+
+		grid-area: main;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr auto;
+		grid-template-areas: 'content' 'footer';
+	}
+
+	footer {
+		grid-area: footer;
+	}
+
+	main {
+		grid-area: content;
+	}
+</style>
