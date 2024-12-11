@@ -1,8 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import hljs from 'highlight.js/lib/core';
-	import xml from 'highlight.js/lib/languages/xml';
-	hljs.registerLanguage('javascript', xml);
+	import { highlight } from './highlight';
 
 	interface Props {
 		title?: string;
@@ -22,7 +20,5 @@
 		{@render children?.()}
 	</div>
 	<!-- eslint-disable svelte/no-at-html-tags -->
-	<pre class="codeblock rounded-none"><code
-			>{@html hljs.highlight(content, { language: 'html' }).value}</code
-		></pre>
+	<pre class="codeblock rounded-none"><code>{@html highlight(content, 'xml')}</code></pre>
 </div>
