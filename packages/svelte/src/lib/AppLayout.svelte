@@ -20,7 +20,7 @@
 	<div class="content">
 		<div class="gap-lg mx-auto flex w-full max-w-screen-lg">
 			{#if props.sidebar}
-				<aside class="sidebar">
+				<aside class="contents">
 					{@render props.sidebar?.()}
 				</aside>
 			{/if}
@@ -29,7 +29,7 @@
 		</div>
 
 		{#if props.footer}
-			<footer class="px-md">
+			<footer>
 				{@render props.footer?.()}
 			</footer>
 		{/if}
