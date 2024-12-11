@@ -1,5 +1,8 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
+	import hljs from 'highlight.js/lib/core';
+	import xml from 'highlight.js/lib/languages/xml';
+	hljs.registerLanguage('javascript', xml);
 
 	interface Props {
 		title?: string;
@@ -18,11 +21,14 @@
 	<div class="p-sm {className}">
 		{@render children?.()}
 	</div>
-	<pre>{content}</pre>
+	<!-- eslint-disable svelte/no-at-html-tags -->
+	<pre class="codeblock rounded-none"><code
+			>{@html hljs.highlight(content, { language: 'html' }).value}</code
+		></pre>
 </div>
 
 <style>
 	pre {
-		@apply font-mono bg-body-highlight p-sm max-w-full overflow-auto;
+		@apply font-mono p-sm max-w-full overflow-auto;
 	}
 </style>

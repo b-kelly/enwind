@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 	import Icon from './Icon.svelte';
 	interface Props {
-		[key: string]: any
+		[key: string]: any;
 	}
 
 	let { ...props }: Props = $props();
@@ -17,7 +17,7 @@
 		},
 		{
 			title: 'Components',
-			items: ['Buttons', 'Inputs', 'Modals', 'Progress', 'Spinner', 'Tables']
+			items: ['Buttons', 'Codeblock', 'Inputs', 'Modals', 'Progress', 'Spinner', 'Tables']
 		}
 	];
 

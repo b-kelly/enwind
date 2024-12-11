@@ -12,5 +12,8 @@
     "devDependencies": {
         "lerna": "8.1.9",
         "typescript": "^5.6.3"
+    },
+    "dependencies": {
+        "highlight.js": "^11.10.0"
     }
 }

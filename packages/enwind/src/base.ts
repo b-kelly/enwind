@@ -24,6 +24,20 @@ const css: CssInJs = (theme) => {
 
         "--_bw-color-danger": enwind("danger.DEFAULT", mode),
         "--_bw-color-danger-focus": enwind("danger.focus", mode),
+
+        // syntax highlighting
+        "--_bw-color-code": enwind("code.DEFAULT", mode),
+        "--_bw-color-code-addition": enwind("code.addition", mode),
+        "--_bw-color-code-attr": enwind("code.attr", mode),
+        "--_bw-color-code-builtin": enwind("code.builtin", mode),
+        "--_bw-color-code-comment": enwind("code.comment", mode),
+        "--_bw-color-code-deletion": enwind("code.deletion", mode),
+        "--_bw-color-code-literal": enwind("code.literal", mode),
+        "--_bw-color-code-meta": enwind("code.meta", mode),
+        "--_bw-color-code-string": enwind("code.string", mode),
+        "--_bw-color-code-tag": enwind("code.tag", mode),
+        "--_bw-color-code-title": enwind("code.title", mode),
+        "--_bw-color-code-variable": enwind("code.variable", mode),
     });
 
     const darkModeVars = {

@@ -2,6 +2,7 @@ import { CssInJs } from "../types";
 import button from "./button";
 import drawer from "./drawer";
 import check from "./check";
+import codeblock from "./codeblock";
 import input from "./input";
 import modal from "./modal";
 import progress from "./progress";
@@ -11,6 +12,7 @@ import table from "./table";
 const components: CssInJs = (theme) => ({
     ...button(theme),
     ...check(theme),
+    ...codeblock(theme),
     ...drawer(theme),
     ...input(theme),
     ...modal(theme),

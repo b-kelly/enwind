@@ -29,6 +29,20 @@ export default {
             DEFAULT: c.red["500"],
             focus: c.red["600"],
         },
+        code: {
+            DEFAULT: c.gray["800"], // body.content.DEFAULT
+            addition: c.green["500"], // success.DEFAULT
+            attr: c.black, // body.content.dark
+            builtin: c.green["700"],
+            comment: c.gray["700"], // body.content.light
+            deletion: c.red["500"], // danger.DEFAULT
+            literal: c.green["700"],
+            meta: c.cyan["700"],
+            string: c.indigo["500"], // primary.DEFAULT
+            tag: c.gray["800"], // body.content.DEFAULT
+            title: c.red["900"],
+            variable: c.red["900"],
+        },
     },
     dark: {
         body: {
@@ -57,6 +71,20 @@ export default {
         danger: {
             DEFAULT: c.red["500"],
             focus: c.red["600"],
+        },
+        code: {
+            DEFAULT: c.gray["200"], // body.content.DEFAULT
+            addition: c.green["500"], // success.DEFAULT
+            attr: c.white, // body.content.dark
+            builtin: c.green["600"],
+            comment: c.gray["300"], // body.content.light
+            deletion: c.red["500"], // danger.DEFAULT
+            literal: c.green["500"],
+            meta: c.cyan["500"],
+            string: c.teal["500"], // primary.DEFAULT
+            tag: c.gray["200"], // body.content.DEFAULT
+            title: c.orange["700"],
+            variable: c.orange["700"],
         },
     },
 };
