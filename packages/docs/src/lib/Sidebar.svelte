@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import Icon from './Icon.svelte';
 	interface Props {
-		[key: string]: any;
+		[key: string]: unknown;
 	}
 
 	let { ...props }: Props = $props();
