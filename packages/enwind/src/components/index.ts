@@ -1,4 +1,5 @@
 import { CssInJs } from "../types";
+import audio from "./audio";
 import button from "./button";
 import drawer from "./drawer";
 import check from "./check";
@@ -10,6 +11,7 @@ import spinner from "./spinner";
 import table from "./table";
 
 const components: CssInJs = (theme) => ({
+    ...audio(theme),
     ...button(theme),
     ...check(theme),
     ...codeblock(theme),

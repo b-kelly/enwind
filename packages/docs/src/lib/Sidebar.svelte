@@ -16,7 +16,7 @@
 		},
 		{
 			title: 'Components',
-			items: ['Buttons', 'Codeblock', 'Inputs', 'Modals', 'Progress', 'Spinner', 'Tables']
+			items: ['Audio', 'Buttons', 'Codeblock', 'Inputs', 'Modals', 'Progress', 'Spinner', 'Tables']
 		}
 	];
 
