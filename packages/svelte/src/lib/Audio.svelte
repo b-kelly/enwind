@@ -21,13 +21,9 @@
 	onMount(() => {
 		if (audio.readyState > 0) {
 			initAudio();
+		} else {
+			audio.addEventListener('loadedmetadata', initAudio);
 		}
-		audio.addEventListener('loadedmetadata', initAudio);
-	});
-
-	function initAudio() {
-		duration = audio.duration;
-		ready = true;
 
 		audio.addEventListener('timeupdate', () => {
 			currentTime = audio.currentTime;
@@ -44,6 +40,17 @@
 		audio.addEventListener('volumechange', () => {
 			isMuted = audio.muted;
 		});
+
+		// listen for duration change, which may fire *after* a file starts playing
+		// this is true for Blob files, whose duration is set to Infinity until they are buffered
+		audio.addEventListener('durationchange', () => {
+			duration = audio.duration;
+		});
+	});
+
+	function initAudio() {
+		duration = audio.duration;
+		ready = true;
 	}
 
 	function onPlayPause() {
@@ -67,6 +74,11 @@
 	}
 
 	function formatTime(seconds: number) {
+		// ignore invalid duration values
+		if (seconds === Infinity || isNaN(+seconds)) {
+			return '0:00';
+		}
+
 		const mins = Math.floor(seconds / 60);
 		const secs = Math.floor(seconds % 60);
 		const padded = secs < 10 ? '0' + secs : secs;
