@@ -20,6 +20,10 @@ const input: CssInJs = (theme) => ({
             opacity: theme("opacity.disabled"),
             backgroundColor: theme("colors.body.highlight"),
         },
+        "&[type='range']": {
+            paddingLeft: "0",
+            paddingRight: "0",
+        },
     },
     ".form-group": {
         display: "flex",
