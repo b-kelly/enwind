@@ -36,8 +36,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@enwindui/svelte": "*",
 		"@enwindui/enwind": "*",
-		"heroicons": "^2.2.0"
+		"@enwindui/svelte": "*",
+		"heroicons": "^2.2.0",
+		"highlight.js": "^11.11.1"
 	}
 }
