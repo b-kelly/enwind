@@ -12,6 +12,7 @@ const modal: CssInJs = (theme) => ({
         justifyContent: "center",
         backgroundColor: theme("colors.overlay.DEFAULT"),
         backdropFilter: "blur(8px)",
+        zIndex: theme("zIndex.modal"),
         "&.visible": {
             display: "flex",
         },
