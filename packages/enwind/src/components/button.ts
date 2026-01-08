@@ -22,6 +22,7 @@ const button: CssInJs = (theme) => ({
         borderColor: "var(--_btn-border)",
         borderRadius: theme("borderRadius.DEFAULT"),
         color: "var(--_btn-fc)",
+        cursor: "pointer",
         outlineStyle: "solid",
         outlineWidth: "0",
         outlineColor: theme("colors.primary.DEFAULT"),
