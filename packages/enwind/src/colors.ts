@@ -1,90 +1,88 @@
-import c from "tailwindcss/colors";
-
 export default {
     light: {
         body: {
-            DEFAULT: c.white,
+            DEFAULT: "var(--color-white)",
             content: {
-                DEFAULT: c.gray["800"],
-                light: c.gray["700"],
-                dark: c.black,
+                DEFAULT: "var(--color-gray-800)",
+                light: "var(--color-gray-700)",
+                dark: "var(--color-black)",
             },
-            highlight: c.neutral["200"],
+            highlight: "var(--color-neutral-200)",
             overlay: "rgb(0 0 0 / 0.5)", // TODO color choice,
         },
         primary: {
-            DEFAULT: c.indigo["500"],
-            content: c.white,
-            focus: c.indigo["600"],
+            DEFAULT: "var(--color-indigo-500)",
+            content: "var(--color-white)",
+            focus: "var(--color-indigo-600)",
         },
         success: {
-            DEFAULT: c.green["500"],
-            focus: c.green["600"],
+            DEFAULT: "var(--color-green-500)",
+            focus: "var(--color-green-600)",
         },
         warn: {
-            DEFAULT: c.amber["400"],
-            focus: c.amber["500"],
+            DEFAULT: "var(--color-amber-400)",
+            focus: "var(--color-amber-500)",
         },
         danger: {
-            DEFAULT: c.red["500"],
-            focus: c.red["600"],
+            DEFAULT: "var(--color-red-500)",
+            focus: "var(--color-red-600)",
         },
         code: {
-            DEFAULT: c.gray["800"], // body.content.DEFAULT
-            addition: c.green["500"], // success.DEFAULT
-            attr: c.black, // body.content.dark
-            builtin: c.green["700"],
-            comment: c.gray["700"], // body.content.light
-            deletion: c.red["500"], // danger.DEFAULT
-            literal: c.green["700"],
-            meta: c.cyan["700"],
-            string: c.indigo["500"], // primary.DEFAULT
-            tag: c.gray["800"], // body.content.DEFAULT
-            title: c.red["900"],
-            variable: c.red["900"],
+            DEFAULT: "var(--color-gray-800)", // body.content.DEFAULT
+            addition: "var(--color-green-500)", // success.DEFAULT
+            attr: "var(--color-black)", // body.content.dark
+            builtin: "var(--color-green-700)",
+            comment: "var(--color-gray-700)", // body.content.light
+            deletion: "var(--color-red-500)", // danger.DEFAULT
+            literal: "var(--color-green-700)",
+            meta: "var(--color-cyan-700)",
+            string: "var(--color-indigo-500)", // primary.DEFAULT
+            tag: "var(--color-gray-800)", // body.content.DEFAULT
+            title: "var(--color-red-900)",
+            variable: "var(--color-red-900)",
         },
     },
     dark: {
         body: {
-            DEFAULT: c.slate["900"],
+            DEFAULT: "var(--color-slate-900)",
             content: {
-                DEFAULT: c.gray["200"],
-                light: c.gray["300"],
-                dark: c.white,
+                DEFAULT: "var(--color-gray-200)",
+                light: "var(--color-gray-300)",
+                dark: "var(--color-white)",
             },
-            highlight: c.slate["600"],
+            highlight: "var(--color-slate-600)",
             overlay: "rgb(0 0 0 / 0.5)", // TODO copied from light mode
         },
         primary: {
-            DEFAULT: c.teal["500"],
-            content: c.black,
-            focus: c.teal["600"],
+            DEFAULT: "var(--color-teal-500)",
+            content: "var(--color-black)",
+            focus: "var(--color-teal-600)",
         },
         success: {
-            DEFAULT: c.green["500"],
-            focus: c.green["600"],
+            DEFAULT: "var(--color-green-500)",
+            focus: "var(--color-green-600)",
         },
         warn: {
-            DEFAULT: c.amber["400"],
-            focus: c.amber["500"],
+            DEFAULT: "var(--color-amber-400)",
+            focus: "var(--color-amber-500)",
         },
         danger: {
-            DEFAULT: c.red["500"],
-            focus: c.red["600"],
+            DEFAULT: "var(--color-red-500)",
+            focus: "var(--color-red-600)",
         },
         code: {
-            DEFAULT: c.gray["200"], // body.content.DEFAULT
-            addition: c.green["500"], // success.DEFAULT
-            attr: c.white, // body.content.dark
-            builtin: c.green["600"],
-            comment: c.gray["300"], // body.content.light
-            deletion: c.red["500"], // danger.DEFAULT
-            literal: c.green["500"],
-            meta: c.cyan["500"],
-            string: c.teal["500"], // primary.DEFAULT
-            tag: c.gray["200"], // body.content.DEFAULT
-            title: c.orange["700"],
-            variable: c.orange["700"],
+            DEFAULT: "var(--color-gray-200)", // body.content.DEFAULT
+            addition: "var(--color-green-500)", // success.DEFAULT
+            attr: "var(--color-white)", // body.content.dark
+            builtin: "var(--color-green-600)",
+            comment: "var(--color-gray-300)", // body.content.light
+            deletion: "var(--color-red-500)", // danger.DEFAULT
+            literal: "var(--color-green-500)",
+            meta: "var(--color-cyan-500)",
+            string: "var(--color-teal-500)", // primary.DEFAULT
+            tag: "var(--color-gray-200)", // body.content.DEFAULT
+            title: "var(--color-orange-700)",
+            variable: "var(--color-orange-700)",
         },
     },
 };

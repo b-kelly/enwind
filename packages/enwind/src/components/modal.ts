@@ -1,6 +1,6 @@
-import { CssInJs } from "../types";
+import type { ThemedCss } from "../types.js";
 
-const modal: CssInJs = (theme) => ({
+const modal: ThemedCss = (theme) => ({
     ".modal": {
         position: "fixed",
         top: "0",

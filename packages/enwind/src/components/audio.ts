@@ -1,6 +1,6 @@
-import type { CssInJs } from "../types";
+import type { ThemedCss } from "../types.js";
 
-const audio: CssInJs = (theme) => ({
+const audio: ThemedCss = (theme) => ({
     ".audio": {
         padding: theme("spacing.sm"),
         borderWidth: theme("borderWidth.DEFAULT"),

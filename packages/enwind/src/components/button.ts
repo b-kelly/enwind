@@ -1,6 +1,6 @@
-import type { CssInJs } from "../types";
+import type { ThemedCss } from "../types.js";
 
-const btnSelected: CssInJs = (theme) => ({
+const btnSelected: ThemedCss = (theme) => ({
     "--_btn-fc": theme("colors.primary.content"),
     "--_btn-bg": theme("colors.primary.DEFAULT"),
     "--_btn-border": theme("colors.primary.focus"),
@@ -10,7 +10,7 @@ const btnSelected: CssInJs = (theme) => ({
     },
 });
 
-const button: CssInJs = (theme) => ({
+const button: ThemedCss = (theme) => ({
     ".btn": {
         "--_btn-bg": "transparent",
         "--_btn-fc": theme("colors.primary.DEFAULT"),

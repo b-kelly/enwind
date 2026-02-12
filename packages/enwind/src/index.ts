@@ -1,9 +1,9 @@
-import plugin from "tailwindcss/plugin";
-import base from "./base";
-import components from "./components";
-import colors from "./colors";
-import type { Config } from "tailwindcss";
-import { utilities } from "./utilities";
+import plugin, { Config } from "tailwindcss/plugin";
+import base from "./base.js";
+import components from "./components/index.js";
+import colors from "./colors.js";
+import { utilities } from "./utilities.js";
+import { CssInJs } from "./types.js";
 
 export interface EnwindOptions {
     // TODO remove others, like spacing?
@@ -15,7 +15,7 @@ export default plugin.withOptions<EnwindOptions>(
     () =>
         function ({ addBase, theme, addComponents }) {
             addBase(base(theme));
-            addComponents(components(theme));
+            addComponents(components(theme) as Record<string, CssInJs>);
         },
     (opts) => {
         const config: Partial<Config> = {
@@ -81,5 +81,5 @@ export default plugin.withOptions<EnwindOptions>(
         }
 
         return config;
-    }
-);
+    },
+) as Config;

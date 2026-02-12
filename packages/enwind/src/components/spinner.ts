@@ -1,6 +1,6 @@
-import { CssInJs } from "../types";
+import type { ThemedCss } from "../types.js";
 
-const spinner: CssInJs = (theme) => ({
+const spinner: ThemedCss = (theme) => ({
     ".spinner": {
         "--_spn-bw": `calc(theme("height.xs") / 2)`,
         "--_spn-h": theme("height.md"),

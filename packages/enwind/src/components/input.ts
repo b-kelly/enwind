@@ -1,6 +1,6 @@
-import type { CssInJs } from "../types";
+import type { ThemedCss } from "../types.js";
 
-const input: CssInJs = (theme) => ({
+const input: ThemedCss = (theme) => ({
     ".input": {
         backgroundColor: theme("colors.body.DEFAULT"),
         borderColor: theme("colors.body.highlight"),

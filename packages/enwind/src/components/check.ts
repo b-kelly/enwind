@@ -1,6 +1,6 @@
-import type { CssInJs } from "../types";
+import type { ThemedCss } from "../types.js";
 
-const check: CssInJs = (theme) => ({
+const check: ThemedCss = (theme) => ({
     ".check": {
         accentColor: theme("colors.primary.DEFAULT"),
         height: theme("spacing.md"),

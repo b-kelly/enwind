@@ -1,6 +1,6 @@
-import type { CssInJs } from "./types";
+import type { ThemedCss } from "./types.js";
 
-const css: CssInJs = (theme) => {
+const css: ThemedCss = (theme) => {
     const enwind = (key: string, mode: string) =>
         theme(`enwind.colors.${mode}.${key}`, null);
 

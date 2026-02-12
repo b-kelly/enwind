@@ -1,6 +1,6 @@
-import type { CssInJs } from "../types";
+import type { ThemedCss } from "../types.js";
 
-const codeblock: CssInJs = (theme) => ({
+const codeblock: ThemedCss = (theme) => ({
     ".codeblock": {
         background: theme("colors.body.highlight"),
         borderRadius: theme("borderRadius.DEFAULT"),

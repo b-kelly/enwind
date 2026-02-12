@@ -1,16 +1,16 @@
-import { CssInJs } from "../types";
-import audio from "./audio";
-import button from "./button";
-import drawer from "./drawer";
-import check from "./check";
-import codeblock from "./codeblock";
-import input from "./input";
-import modal from "./modal";
-import progress from "./progress";
-import spinner from "./spinner";
-import table from "./table";
+import type { ThemedCss } from "../types.js";
+import audio from "./audio.js";
+import button from "./button.js";
+import drawer from "./drawer.js";
+import check from "./check.js";
+import codeblock from "./codeblock.js";
+import input from "./input.js";
+import modal from "./modal.js";
+import progress from "./progress.js";
+import spinner from "./spinner.js";
+import table from "./table.js";
 
-const components: CssInJs = (theme) => ({
+const components: ThemedCss = (theme) => ({
     ...audio(theme),
     ...button(theme),
     ...check(theme),

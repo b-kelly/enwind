@@ -1,6 +1,6 @@
 import { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
-import { PluginUtils } from "tailwindcss/types/config";
+import { PluginUtils } from "tailwindcss/plugin";
 
 // the default theme values are all callable, so cast them for code cleanliness
 type ResolvableTo = <T>(utils: PluginUtils) => T;

@@ -1,6 +1,6 @@
-import type { CssInJs } from "../types";
+import type { ThemedCss } from "../types.js";
 
-const overlay: CssInJs = (theme) => ({
+const overlay: ThemedCss = (theme) => ({
     position: "fixed",
     top: "0",
     bottom: "0",

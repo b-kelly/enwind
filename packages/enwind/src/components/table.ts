@@ -1,6 +1,6 @@
-import type { CssInJs } from "../types";
+import type { ThemedCss } from "../types.js";
 
-const table: CssInJs = (theme) => ({
+const table: ThemedCss = (theme) => ({
     ".table": {
         width: "100%",
         maxWidth: "100%",

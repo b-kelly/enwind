@@ -1,7 +1,7 @@
-import type { CssInJs } from "../types";
-import overlay from "./_overlay";
+import type { ThemedCss } from "../types.js";
+import overlay from "./_overlay.js";
 
-const drawer: CssInJs = (theme) => ({
+const drawer: ThemedCss = (theme) => ({
     ".drawer": {
         ...overlay(theme),
         zIndex: theme("zIndex.drawer"),

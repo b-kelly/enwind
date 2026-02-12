@@ -1,6 +1,6 @@
-import { CssInJs } from "../types";
+import type { ThemedCss } from "../types.js";
 
-const progress: CssInJs = (theme) => ({
+const progress: ThemedCss = (theme) => ({
     ".progress": {
         "--value": "0",
         backgroundColor: theme("colors.body.highlight"),
@@ -38,7 +38,7 @@ const progress: CssInJs = (theme) => ({
             bottom: "0",
             left: "0",
             background: `${theme(
-                "colors.body.highlight"
+                "colors.body.highlight",
             )} conic-gradient(currentColor calc(var(--value) * 1%), transparent 0)`,
             mask: "radial-gradient(farthest-side, transparent calc(100% - var(--thickness)), #000 calc(100% - var(--thickness)))",
         },
