@@ -40,8 +40,5 @@
 		"@enwindui/svelte": "*",
 		"heroicons": "^2.2.0",
 		"highlight.js": "^11.11.1"
-	},
-	"imports": {
-		"#app.css": "./src/css/app.css"
 	}
 }
