@@ -122,6 +122,8 @@
 </Section>
 
 <style>
+	@reference "#app.css";
+
 	.swatch {
 		@apply w-lg h-lg inline-block border;
 	}
