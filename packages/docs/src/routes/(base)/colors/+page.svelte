@@ -70,6 +70,57 @@
 			<span class="swatch bg-danger-focus"></span>
 			<span>colors.danger.focus</span>
 		</div>
+
+		<hr class="col-span-2" />
+
+		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-code"></span>
+			<span>colors.code</span>
+		</div>
+		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-code-addition"></span>
+			<span>colors.code.addition</span>
+		</div>
+		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-code-attr"></span>
+			<span>colors.code.attr</span>
+		</div>
+		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-code-builtin"></span>
+			<span>colors.code.builtin</span>
+		</div>
+		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-code-comment"></span>
+			<span>colors.code.comment</span>
+		</div>
+		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-code-deletion"></span>
+			<span>colors.code.deletion</span>
+		</div>
+		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-code-literal"></span>
+			<span>colors.code.literal</span>
+		</div>
+		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-code-meta"></span>
+			<span>colors.code.meta</span>
+		</div>
+		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-code-string"></span>
+			<span>colors.code.string</span>
+		</div>
+		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-code-tag"></span>
+			<span>colors.code.tag</span>
+		</div>
+		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-code-title"></span>
+			<span>colors.code.title</span>
+		</div>
+		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-code-variable"></span>
+			<span>colors.code.variable</span>
+		</div>
 	</div>
 </Section>
 
