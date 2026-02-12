@@ -13,6 +13,8 @@
 </span>
 
 <style>
+	@reference "./app.css";
+
 	.icon {
 		@apply inline-block h-[20px] w-[20px] align-bottom text-[0];
 	}

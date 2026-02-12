@@ -37,6 +37,8 @@
 </div>
 
 <style>
+	@reference "./app.css";
+
 	.main-container {
 		@apply grid h-screen w-screen;
 
