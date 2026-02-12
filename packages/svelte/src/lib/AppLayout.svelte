@@ -37,7 +37,7 @@
 </div>
 
 <style>
-	/* @reference "./app.css"; */
+	@reference "tailwindcss";
 
 	.main-container {
 		@apply grid h-screen w-screen;

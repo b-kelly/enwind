@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Sample from '$lib/Sample.svelte';
 	import Section from '$lib/Section.svelte';
-	import { Audio } from '@enwindui/svelte';
+	// import { Audio } from '@enwindui/svelte';
 
 	let audio: HTMLAudioElement | undefined = $state();
 </script>
@@ -19,6 +19,6 @@
 	>
 		<audio src="https://cdn.pixabay.com/audio/2024/06/25/audio_edba63c54d.mp3" bind:this={audio}
 		></audio>
-		<Audio {audio} />
+		<!-- <Audio {audio} /> -->
 	</Sample>
 </Section>
