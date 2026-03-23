@@ -1,0 +1,22 @@
+@layer components {
+    .table {
+        @apply w-full max-w-full border-collapse border-0;
+    }
+
+    .table tr {
+        @apply border-b border-b-body-highlight;
+    }
+
+    .table tr:last-of-type {
+        @apply border-b-transparent;
+    }
+
+    .table th,
+    .table td {
+        @apply p-2 align-middle text-left;
+    }
+
+    .table thead th {
+        @apply font-bold align-bottom whitespace-nowrap leading-[1.25] border-b border-b-body-highlight;
+    }
+}
