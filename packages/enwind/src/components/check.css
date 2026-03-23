@@ -1,6 +1,6 @@
 @layer components {
     .check {
-        @apply accent-primary height-md width-md outline-0 outline-primary-focus outline-offset-1;
+        @apply accent-primary h-md w-md outline-0 outline-primary-focus outline-offset-1;
     }
 
     .check:disabled {
