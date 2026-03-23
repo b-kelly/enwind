@@ -1,0 +1,17 @@
+@layer components {
+    .audio {
+        @apply p-sm border border-body-highlight rounded flex items-center max-w-full leading-none;
+    }
+
+    .audio .audio-duration-text {
+        @apply whitespace-nowrap;
+    }
+
+    .audio .audio-seek-control {
+        @apply ml-sm flex-grow-1 w-0;
+    }
+
+    .audio .disabled {
+        @apply opacity-disabled pointer-events-none;
+    }
+}
