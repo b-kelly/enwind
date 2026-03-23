@@ -1,6 +1,5 @@
 import plugin, { Config } from "tailwindcss/plugin";
 import components from "./components/index.js";
-import { utilities } from "./utilities.js";
 import { CssInJs } from "./types.js";
 
 export interface EnwindOptions {
@@ -17,18 +16,16 @@ export default plugin.withOptions<EnwindOptions>(
     (opts) => {
         const config: Partial<Config> = {
             theme: {
-                extend: {
-                    ...utilities,
-                },
+                extend: {},
             },
         };
 
         if (opts?.strict) {
             config.theme!["colors"] = {};
 
-            Object.keys(utilities).map((k) => {
-                config.theme![k] = {};
-            });
+            // Object.keys(utilities).map((k) => {
+            //     config.theme![k] = {};
+            // });
         }
 
         return config;
