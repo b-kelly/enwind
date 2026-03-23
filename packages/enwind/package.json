@@ -10,10 +10,7 @@
     "dist/**/*"
   ],
   "scripts": {
-    "dev": "npm run build -- --watch",
-    "build": "vite build -c vite.plugin.js",
-    "preview": "vite preview",
-    "prepublishOnly": "npm run build && copyfiles ../../README.md ./enwind/README.md"
+    "prepublishOnly": "copyfiles ../../README.md ./enwind/README.md"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.24",
