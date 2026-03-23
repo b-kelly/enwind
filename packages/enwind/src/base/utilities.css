@@ -11,24 +11,22 @@
     --spacing-3xl: var(--spacing-16);
 }
 
-@layer utilities {
-    .opacity-disabled {
-        @apply opacity-60;
-    }
+@utility opacity-disabled {
+    @apply opacity-60;
+}
 
-    .outline-sm {
-        @apply outline-2;
-    }
+@utility outline-sm {
+    @apply outline-2;
+}
 
-    .z-index-base {
-        z-index: 0;
-    }
+@utility z-index-base {
+    z-index: 0;
+}
 
-    .z-index-drawer {
-        z-index: 500;
-    }
+@utility z-index-drawer {
+    z-index: 500;
+}
 
-    .z-index-modal {
-        z-index: 1000;
-    }
+@utility z-index-modal {
+    z-index: 1000;
 }
