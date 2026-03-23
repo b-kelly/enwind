@@ -1,5 +1,4 @@
 @import "./base/globals.css";
 @import "./base/theme.css";
 @import "./base/utilities.css";
-
-/* TODO components */
+@import "./base/components.css";
