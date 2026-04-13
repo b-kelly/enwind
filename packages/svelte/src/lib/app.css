@@ -1,2 +1,2 @@
 @import 'tailwindcss';
-@plugin "@enwindui/enwind";
+@import '@enwindui/enwind';

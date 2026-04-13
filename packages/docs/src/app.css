@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @source '../svelte/**/*.{html,js,svelte,ts}';
-@import '../../enwind/src/index.css'; /* TODO package import */
+@import '@enwindui/enwind';
 
 html,
 body {
