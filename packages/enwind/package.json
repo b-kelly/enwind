@@ -5,10 +5,15 @@
   "main": "./dist/plugin.umd.cjs",
   "module": "./dist/plugin.js",
   "types": "./dist",
-  "files": [
-    "src/**/*",
-    "dist/**/*"
-  ],
+	"exports": {
+		".": {
+			"import": "./src/index.css",
+			"style": "./src/index.css"
+		}
+	},
+	"files": [
+		"src"
+	],
   "scripts": {
     "prepublishOnly": "copyfiles ../../README.md ./enwind/README.md"
   },
