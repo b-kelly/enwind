@@ -17,6 +17,6 @@
     }
 
     .table thead th {
-        @apply font-bold align-bottom whitespace-nowrap leading-[1.25] border-b border-b-body-highlight;
+        @apply font-bold align-bottom whitespace-nowrap leading-tight border-b border-b-body-highlight;
     }
 }
