@@ -1,6 +1,6 @@
 @layer components {
     .audio {
-        @apply p-sm border border-body-highlight rounded flex items-center max-w-full leading-none;
+        @apply p-sm border border-body-highlight rounded-md flex items-center max-w-full leading-none;
     }
 
     .audio .audio-duration-text {

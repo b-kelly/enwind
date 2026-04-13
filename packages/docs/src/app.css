@@ -13,8 +13,7 @@ body {
 
 /* TODO add to enwind -> base */
 ::-webkit-scrollbar {
-	@apply w-sm;
-	@apply h-sm;
+	@apply w-sm h-sm;
 }
 
 ::-webkit-scrollbar-track {
