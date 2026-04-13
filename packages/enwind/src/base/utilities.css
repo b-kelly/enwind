@@ -19,14 +19,19 @@
     @apply outline-2;
 }
 
-@utility z-index-base {
+@utility z-base {
     z-index: 0;
 }
 
-@utility z-index-drawer {
+@utility z-drawer {
     z-index: 500;
 }
 
-@utility z-index-modal {
+@utility z-modal {
     z-index: 1000;
+}
+
+/* TODO move?? name?? */
+@utility apply-overlay {
+    @apply fixed top-0 bottom-0 left-0 right-0 bg-body-overlay backdrop-blur-sm;
 }

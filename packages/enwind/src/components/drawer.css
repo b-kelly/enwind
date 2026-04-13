@@ -1,0 +1,9 @@
+@layer components {
+    .drawer {
+        @apply apply-overlay z-drawer;
+    }
+
+    .drawer .drawer-contents {
+        @apply bg-body h-full w-1/2 overflow-auto;
+    }
+}
