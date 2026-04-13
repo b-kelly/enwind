@@ -1,0 +1,19 @@
+@layer components {
+    .input {
+        @apply bg-body border-body-highlight outline-solid outline-0 outline-primary-focus inline-block py-xs px-sm rounded border accent-primary;
+    }
+
+    .input:focus,
+    .input:where(.focus) {
+        @apply outline-sm;
+    }
+
+    .input:disabled,
+    .input:where(.disabled) {
+        @apply cursor-not-allowed opacity-disabled bg-body-highlight;
+    }
+
+    .input[type="range"] {
+        @apply px-0;
+    }
+}
