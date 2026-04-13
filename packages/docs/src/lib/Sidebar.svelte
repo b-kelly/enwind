@@ -16,7 +16,17 @@
 		},
 		{
 			title: 'Components',
-			items: ['Audio', 'Buttons', 'Codeblock', 'Inputs', 'Modals', 'Progress', 'Spinner', 'Tables']
+			items: [
+				'Audio',
+				'Buttons',
+				'Codeblock',
+				'Drawer',
+				'Inputs',
+				'Modals',
+				'Progress',
+				'Spinner',
+				'Tables'
+			]
 		}
 	];
 
