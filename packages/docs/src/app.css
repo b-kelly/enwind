@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@config "../tailwind.config.js";
+@source '../svelte/**/*.{html,js,svelte,ts}';
 @import '../../enwind/src/index.css'; /* TODO package import */
 
 html,
