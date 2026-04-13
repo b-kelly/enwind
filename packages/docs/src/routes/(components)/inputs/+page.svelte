@@ -39,6 +39,16 @@
 			<option>disabled</option>
 		</select>
 	</Sample>
+
+	<Sample
+		title="input[type=range]"
+		class="grid grid-cols-2 gap-sm"
+		content={`<input type="range" class="input" />`}
+	>
+		<input type="range" class="input" min="0" max="10" placeholder="default" />
+		<input type="range" class="input focus" min="0" max="10" placeholder="focus" />
+		<input type="range" class="input" min="0" max="10" placeholder="disabled" disabled />
+	</Sample>
 </Section>
 
 <Section title="Checks">
