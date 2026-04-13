@@ -1,0 +1,20 @@
+@layer components {
+    .spinner {
+        --_spn-bw: calc(var(--spacing-xs) / 2);
+        --_spn-h: var(--spacing-md);
+        @apply inline-flex items-center gap-xs;
+    }
+
+    .spinner::before {
+        @apply border-current border-t-transparent rounded-full animate-spin;
+        content: "";
+        height: var(--_spn-h);
+        width: var(--_spn-h);
+        border-width: var(--_spn-bw);
+    }
+
+    .spinner-lg {
+        --_spn-bw: var(--spacing-xs);
+        --_spn-h: var(--spacing-xl);
+    }
+}
