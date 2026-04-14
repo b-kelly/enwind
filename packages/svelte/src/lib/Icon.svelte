@@ -1,21 +1,19 @@
 <script lang="ts">
 	interface Props {
 		icon: string;
+		size?: 'lg' | 'sm' | '';
+		class?: string;
 		[key: string]: unknown;
 	}
 
-	let { icon, ...rest }: Props = $props();
+	let { icon, size = '', class: className, ...rest }: Props = $props();
+
+	function getSizeClass(size: Props['size']) {
+		return size ? `icon-${size}` : '';
+	}
 </script>
 
-<span class="icon" {...rest}>
+<span class="icon {getSizeClass(size)} {className}" {...rest}>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	{@html icon}
 </span>
-
-<style>
-	@reference "./app.css";
-
-	.icon {
-		@apply inline-block h-[20px] w-[20px] align-bottom text-[0];
-	}
-</style>
