@@ -46,17 +46,17 @@
             --_ew-color-body-content: var(--color-gray-200);
             --_ew-color-body-content-light: var(--color-gray-300);
             --_ew-color-body-content-dark: var(--color-white);
-            --_ew-color-body-highlight: var(var(--color-slate-600));
-            --_ew-color-body-overlay: rgb(
-                0 0 0 / 0.5
-            ); /* TODO copied from light mode */
+            --_ew-color-body-highlight: var(--color-slate-600);
+            --_ew-color-body-overlay: rgb(0 0 0 / 0.5);
 
-            --_ew-color-success: var(--color-success);
-            --_ew-color-success-focus: var(--color-success-focus);
-            --_ew-color-warn: var(--color-warn);
-            --_ew-color-warn-focus: var(--color-warn-focus);
-            --_ew-color-danger: var(--color-danger);
-            --_ew-color-danger-focus: var(--color-danger-focus);
+            /* TODO copied from light mode */
+
+            --_ew-color-success: var(--color-green-500);
+            --_ew-color-success-focus: var(--color-green-600);
+            --_ew-color-warn: var(--color-amber-400);
+            --_ew-color-warn-focus: var(--color-amber-500);
+            --_ew-color-danger: var(--color-red-500);
+            --_ew-color-danger-focus: var(--color-red-600);
 
             --_ew-color-code: var(--_ew-color-body-content);
             --_ew-color-code-addition: var(--_ew-color-success);
@@ -71,23 +71,24 @@
             --_ew-color-code-title: var(--color-red-700);
             --_ew-color-code-variable: var(--color-red-700);
         }
+    }
 
-        /* Base classes */
-        body {
-            background-color: var(--color-body);
-            color: var(--color-body-content);
+    /* Base classes */
+    body {
+        background-color: var(--color-body);
+        color: var(--color-body-content);
+    }
+
+    a {
+        color: var(--color-primary);
+
+        /* TODO group? */
+        @variant hover {
+            color: var(--color-primary-focus);
         }
 
-        a {
-            color: var(--color-primary);
-            /* TODO group? */
-            @variant hover {
-                color: var(--color-primary-focus);
-            }
-
-            @variant focus {
-                color: var(--color-primary-focus);
-            }
+        @variant focus {
+            color: var(--color-primary-focus);
         }
     }
 }
