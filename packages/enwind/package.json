@@ -1,26 +1,23 @@
 {
-  "name": "@enwindui/enwind",
-  "version": "0.7.0",
-  "type": "module",
-  "main": "./dist/plugin.umd.cjs",
-  "module": "./dist/plugin.js",
-  "types": "./dist",
-  "exports": {
-    ".": {
-      "import": "./src/index.css",
-      "style": "./src/index.css"
+    "name": "@enwindui/enwind",
+    "version": "0.7.0",
+    "type": "module",
+    "exports": {
+        ".": {
+            "import": "./src/index.css",
+            "style": "./src/index.css"
+        }
+    },
+    "files": [
+        "src"
+    ],
+    "scripts": {
+        "prepublishOnly": "copyfiles ../../README.md ./enwind/README.md"
+    },
+    "devDependencies": {
+        "copyfiles": "^2.4.1"
+    },
+    "dependencies": {
+        "tailwindcss": "^4.2.2"
     }
-  },
-  "files": [
-    "src"
-  ],
-  "scripts": {
-    "prepublishOnly": "copyfiles ../../README.md ./enwind/README.md"
-  },
-  "devDependencies": {
-    "copyfiles": "^2.4.1"
-  },
-  "dependencies": {
-    "tailwindcss": "^4.2.2"
-  }
 }
