@@ -18,7 +18,7 @@
 	{/if}
 
 	<div class="content">
-		<div class="gap-lg mx-auto flex w-full max-w-screen-lg">
+		<div class="flex gap-lg mx-auto w-full max-w-screen-lg">
 			{#if props.sidebar}
 				<aside class="contents">
 					{@render props.sidebar?.()}
@@ -37,6 +37,8 @@
 </div>
 
 <style>
+	@reference "./app.css";
+
 	.main-container {
 		@apply grid h-screen w-screen;
 

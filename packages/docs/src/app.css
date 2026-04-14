@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@source '../../svelte/**/*.{html,js,svelte,ts}';
+@import '@enwindui/enwind';
 
 html,
 body {
@@ -13,8 +13,7 @@ body {
 
 /* TODO add to enwind -> base */
 ::-webkit-scrollbar {
-	@apply w-sm;
-	@apply h-sm;
+	@apply w-sm h-sm;
 }
 
 ::-webkit-scrollbar-track {

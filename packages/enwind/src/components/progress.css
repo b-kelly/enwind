@@ -1,0 +1,35 @@
+@layer components {
+    .progress {
+        --value: 0;
+        @apply bg-body-highlight rounded text-primary h-sm overflow-hidden w-full;
+    }
+
+    .progress::before {
+        @apply bg-current block h-sm;
+        content: "";
+        width: calc(var(--value, 0) * 1%);
+    }
+
+    .progress-circle {
+        --value: 0;
+        --width: --spacing(32);
+        --thickness: calc(var(--width) / 10);
+
+        @apply relative inline-flex items-center justify-center rounded-full overflow-hidden text-primary-focus;
+
+        height: var(--width);
+        width: var(--width);
+    }
+
+    .progress-circle::before {
+        @apply absolute top-0 right-0 bottom-0 left-0;
+        content: "";
+        background: var(--color-body-highlight)
+            conic-gradient(currentColor calc(var(--value) * 1%), transparent 0);
+        mask: radial-gradient(
+            farthest-side,
+            transparent calc(100% - var(--thickness)),
+            #000 calc(100% - var(--thickness))
+        );
+    }
+}

@@ -1,0 +1,72 @@
+@layer components {
+    /* Base button */
+
+    .btn {
+        --_btn-bg: transparent;
+        --_btn-fg: var(--color-primary);
+        --_btn-border: transparent;
+
+        @apply inline-block p-sm border rounded cursor-pointer outline-0 outline-solid outline-primary;
+
+        background-color: var(--_btn-bg);
+        border-color: var(--_btn-border);
+        color: var(--_btn-fc);
+    }
+
+    .btn:hover,
+    .btn:where(.hover) {
+        --_btn-bg: var(--color-body-highlight);
+        --_btn-border: var(--color-body-highlight);
+
+        color: var(--_btn-fc);
+    }
+
+    .btn:focus-visible,
+    .btn:where(.focus) {
+        @apply outline-sm shadow inset-ring inset-ring-body;
+        color: var(--_btn-fc);
+    }
+
+    .btn:active,
+    .btn:where(.active) {
+        @apply scale-95;
+        color: var(--_btn-fc);
+    }
+
+    .btn:disabled,
+    .btn:where(.disabled) {
+        @apply opacity-disabled pointer-events-none;
+    }
+
+    /* Primary button */
+
+    .btn-primary {
+        --_btn-fc: var(--color-primary-content);
+        --_btn-bg: var(--color-primary);
+        --_btn_border: var(--color-primary-focus);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:where(.hover) {
+        --_btn-bg: var(--color-primary-focus);
+        --_btn-border: var(--color-primary-focus);
+    }
+
+    /* Outlined button */
+
+    .btn-outline {
+        --_btn-border: currentColor;
+    }
+
+    .btn-outline:hover,
+    .btn-outline:where(.hover) {
+        --_btn-border: currentColor;
+    }
+
+    /* Icon-only button */
+
+    .btn-icon {
+        --_btn-border: transparent;
+        @apply inline-flex items-center justify-center self-stretch rounded-full gap-sm;
+    }
+}

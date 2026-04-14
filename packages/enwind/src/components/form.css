@@ -1,0 +1,17 @@
+@layer components {
+    .form-group {
+        @apply flex flex-col gap-xs;
+    }
+
+    .form-group label {
+        @apply text-sm leading-tight;
+    }
+
+    .form-check {
+        @apply flex items-center gap-xs py-xs px-sm;
+    }
+
+    .form-inline {
+        @apply flex items-center gap-sm;
+    }
+}

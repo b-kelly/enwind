@@ -1,0 +1,14 @@
+@layer components {
+    .check {
+        @apply accent-primary h-md w-md outline-0 outline-primary-focus outline-offset-1;
+    }
+
+    .check:disabled {
+        @apply cursor-not-allowed opacity-disabled;
+    }
+
+    .check:focus,
+    .check:where(.focus) {
+        @apply outline-sm;
+    }
+}

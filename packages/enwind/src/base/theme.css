@@ -1,0 +1,47 @@
+@theme {
+    /* Body */
+    --color-body: var(--_ew-color-body);
+    --color-body-content: var(--_ew-color-body-content);
+    --color-body-content-light: var(--_ew-color-body-content-light);
+    --color-body-content-dark: var(--_ew-color-body-content-dark);
+    --color-body-highlight: var(--_ew-color-body-highlight);
+    --color-body-overlay: var(--_ew-color-body-overlay);
+
+    /* Primary */
+    --color-primary: var(--_ew-color-primary);
+    --color-primary-content: var(--_ew-color-primary-content);
+    --color-primary-focus: var(--_ew-color-primary-focus);
+
+    /* Status */
+    --color-success: var(--_ew-color-success);
+    --color-success-focus: var(--_ew-color-success-focus);
+    --color-warn: var(--_ew-color-warn);
+    --color-warn-focus: var(--_ew-color-warn-focus);
+    --color-danger: var(--_ew-color-danger);
+    --color-danger-focus: var(--_ew-color-danger-focus);
+
+    /* Code */
+    --color-code: var(--_ew-color-code);
+    --color-code-addition: var(--_ew-color-code-addition);
+    --color-code-attr: var(--_ew-color-code-attr);
+    --color-code-builtin: var(--_ew-color-code-builtin);
+    --color-code-comment: var(--_ew-color-code-comment);
+    --color-code-deletion: var(--_ew-color-code-deletion);
+    --color-code-literal: var(--_ew-color-code-literal);
+    --color-code-meta: var(--_ew-color-code-meta);
+    --color-code-string: var(--_ew-color-code-string);
+    --color-code-tag: var(--_ew-color-code-tag);
+    --color-code-title: var(--_ew-color-code-title);
+    --color-code-variable: var(--_ew-color-code-variable);
+
+    /* Spacing */
+    --spacing-px: 1px;
+    --spacing-0: 0;
+    --spacing-xs: --spacing(1);
+    --spacing-sm: --spacing(2);
+    --spacing-md: --spacing(4);
+    --spacing-lg: --spacing(6);
+    --spacing-xl: --spacing(8);
+    --spacing-2xl: --spacing(12);
+    --spacing-3xl: --spacing(16);
+}

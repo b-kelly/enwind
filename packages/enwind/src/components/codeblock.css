@@ -1,0 +1,93 @@
+@layer components {
+    .codeblock {
+        @apply bg-body-highlight rounded text-code block font-mono max-w-full overflow-auto p-sm;
+    }
+
+    .codeblock .hljs-subst,
+    .codeblock .hljs-formula,
+    .codeblock .hljs-attr,
+    .codeblock .hljs-property,
+    .codeblock .hljs-params {
+        /* default color */
+        @apply text-inherit;
+    }
+
+    .codeblock.hljs-comment {
+        @apply text-code-comment;
+    }
+
+    .codeblock .hljs-tag,
+    .codeblock .hljs-punctuation {
+        @apply text-code-tag;
+    }
+
+    .codeblock .hljs-tag .hljs-name,
+    .codeblock .hljs-tag .hljs-attr {
+        @apply text-code-attr;
+    }
+
+    .codeblock .hljs-keyword,
+    .codeblock .hljs-attribute,
+    .codeblock .hljs-selector-tag,
+    .codeblock .hljs-meta .hljs-keyword,
+    .codeblock .hljs-doctag,
+    .codeblock .hljs-name {
+        @apply font-bold;
+    }
+
+    .codeblock .hljs-type,
+    .codeblock .hljs-string,
+    .codeblock .hljs-number,
+    .codeblock .hljs-selector-id,
+    .codeblock .hljs-selector-class,
+    .codeblock .hljs-quote,
+    .codeblock .hljs-template-tag {
+        @apply text-code-string;
+    }
+
+    .codeblock .hljs-title,
+    .codeblock .hljs-section {
+        @apply text-code-title font-bold;
+    }
+
+    .codeblock .hljs-regexp,
+    .codeblock .hljs-symbol,
+    .codeblock .hljs-variable,
+    .codeblock .hljs-template-variable,
+    .codeblock .hljs-link,
+    .codeblock .hljs-selector-attr,
+    .codeblock .hljs-operator,
+    .codeblock .hljs-selector-pseudo {
+        @apply text-code-variable;
+    }
+
+    .codeblock .hljs-literal {
+        @apply text-code-literal;
+    }
+
+    .codeblock .hljs-built_in,
+    .codeblock .hljs-bullet,
+    .codeblock .hljs-code {
+        @apply text-code-builtin;
+    }
+
+    .codeblock .hljs-meta {
+        @apply text-code-meta;
+    }
+
+    .codeblock .hljs-addition {
+        @apply text-code-addition;
+    }
+
+    .codeblock .hljs-deletion {
+        @apply text-code-deletion;
+    }
+
+    .codeblock .hljs-emphasis {
+        @apply italic;
+    }
+
+    .codeblock .hljs-strong {
+        @apply font-bold;
+    }
+}

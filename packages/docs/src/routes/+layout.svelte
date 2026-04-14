@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onNavigate } from '$app/navigation';
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import Icon from '$lib/Icon.svelte';
 	import Sidebar from '$lib/Sidebar.svelte';
 	import { AppLayout, Drawer, getDrawerStore, initializeStores } from '@enwindui/svelte';
@@ -17,9 +17,10 @@
 
 	const drawerStore = getDrawerStore();
 
-	function toggleMode() {
-		document.body.classList.toggle('theme-dark');
-	}
+	// TODO reenable when dark mode class support is readded
+	// function toggleMode() {
+	// 	document.body.classList.toggle('theme-dark');
+	// }
 
 	onNavigate(() => {
 		drawerStore.close();
@@ -37,15 +38,15 @@
 				<Icon icon="bars3"></Icon>
 				<span class="sr-only">Menu</span>
 			</button>
-			<h1 class="text-3xl font-bold"><a href={base || '/'}>enwind</a></h1>
-			<button
+			<h1 class="text-3xl font-bold"><a href={resolve('/')}>enwind</a></h1>
+			<!-- <button
 				class="btn inline-flex items-center gap-xs ml-auto"
 				onclick={toggleMode}
 				type="button"
 			>
-				<Icon icon={'sparkles'} />
+				<Icon icon="sparkles" />
 				Switch mode
-			</button>
+			</button> -->
 		</nav>
 	{/snippet}
 

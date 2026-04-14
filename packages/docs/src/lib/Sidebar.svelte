@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
+
 	interface Props {
 		[key: string]: unknown;
 	}
@@ -16,24 +17,30 @@
 		},
 		{
 			title: 'Components',
-			items: ['Audio', 'Buttons', 'Codeblock', 'Inputs', 'Modals', 'Progress', 'Spinner', 'Tables']
+			items: [
+				'Audio',
+				'Buttons',
+				'Codeblock',
+				'Drawer',
+				'Inputs',
+				'Modals',
+				'Progress',
+				'Spinner',
+				'Tables'
+			]
 		}
 	];
-
-	function link(url: string) {
-		return `${base}/${url.toLocaleLowerCase()}`;
-	}
 </script>
 
 <div class="flex flex-col gap-md {props.class}">
-	<a href="{base}/">Home</a>
-	{#each menu as cat}
+	<a href={resolve('/')}>Home</a>
+	{#each menu as cat, i (i)}
 		<div>
 			<h2 class="text-xl mb-xs">{cat.title}</h2>
 			<ul>
-				{#each cat.items as item}
+				{#each cat.items as item, i (i)}
 					<li>
-						<a href={link(item)}>{item}</a>
+						<a href={resolve('/' + item.toLocaleLowerCase())}>{item}</a>
 					</li>
 				{/each}
 			</ul>

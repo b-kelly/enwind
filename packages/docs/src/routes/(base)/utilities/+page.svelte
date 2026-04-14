@@ -1,19 +1,14 @@
 <script lang="ts">
 	import Section from '$lib/Section.svelte';
-	import type { PageData } from './$types';
 
-	interface Props {
-		data: PageData;
-	}
-
-	let { data }: Props = $props();
+	const spacingClasses = ['w-0', 'w-px', 'w-xs', 'w-sm', 'w-md', 'w-lg', 'w-xl', 'w-2xl', 'w-3xl'];
 </script>
 
 <Section title="Spacing">
 	<div class="inline-grid grid-cols-2 gap-sm">
-		{#each Object.entries(data?.spacing || {}) as [key, value]}
-			<span>{key} ({value})</span>
-			<div class="bg-primary text-primary-content" style="width: {value}">&nbsp;</div>
+		{#each spacingClasses as spacing, i (i)}
+			<span>{spacing}</span>
+			<div class="bg-primary text-primary-content {spacing}">&nbsp;</div>
 		{/each}
 	</div>
 </Section>

@@ -1,0 +1,17 @@
+@layer components {
+    .modal {
+        @apply apply-overlay w-full h-full hidden items-center justify-center z-modal;
+    }
+
+    .modal.visible {
+        @apply flex;
+    }
+
+    .modal .modal-dialog {
+        @apply bg-body max-w-full w-full rounded border p-lg flex flex-col gap-lg;
+    }
+
+    .modal .modal-title {
+        @apply text-2xl leading-8 flex items-start justify-between;
+    }
+}
