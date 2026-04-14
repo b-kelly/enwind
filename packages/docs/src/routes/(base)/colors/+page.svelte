@@ -55,6 +55,11 @@
 			<span>colors.success.focus</span>
 		</div>
 		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-success-content"></span>
+			<span>colors.success.content</span>
+		</div>
+		<div>&nbsp;</div>
+		<div class="flex ai-center gap-sm">
 			<span class="swatch bg-warn"></span>
 			<span>colors.warn</span>
 		</div>
@@ -63,12 +68,21 @@
 			<span>colors.warn.focus</span>
 		</div>
 		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-warn-content"></span>
+			<span>colors.warn.content</span>
+		</div>
+		<div>&nbsp;</div>
+		<div class="flex ai-center gap-sm">
 			<span class="swatch bg-danger"></span>
 			<span>colors.danger</span>
 		</div>
 		<div class="flex ai-center gap-sm">
 			<span class="swatch bg-danger-focus"></span>
 			<span>colors.danger.focus</span>
+		</div>
+		<div class="flex ai-center gap-sm">
+			<span class="swatch bg-danger-content"></span>
+			<span>colors.danger.content</span>
 		</div>
 
 		<hr class="col-span-2" />
@@ -126,18 +140,10 @@
 
 <Section title="Examples">
 	<div class="flex flex-col gap-sm">
-		<div class="flex gap-sm">
-			<div>
-				<p class="text-body-content-light">light text</p>
-				<p class="text-body-content">default text</p>
-				<p class="text-body-content-dark">dark text</p>
-			</div>
-
-			<div>
-				<p class="text-success">success text</p>
-				<p class="text-warn">warn text</p>
-				<p class="text-danger">danger text</p>
-			</div>
+		<div>
+			<p class="text-body-content-light">light text</p>
+			<p class="text-body-content">default text</p>
+			<p class="text-body-content-dark">dark text</p>
 		</div>
 
 		<hr />
@@ -156,18 +162,18 @@
 		</div>
 
 		<div class="flex gap-sm">
-			<div class="bg-success text-primary-content rounded p-sm">success content</div>
-			<div class="bg-success-focus text-primary-content rounded p-sm">focused success content</div>
+			<div class="bg-success text-success-content rounded p-sm">success content</div>
+			<div class="bg-success-focus text-success-content rounded p-sm">focused success content</div>
 		</div>
 
 		<div class="flex gap-sm">
-			<div class="bg-warn text-primary-content rounded p-sm">warn content</div>
-			<div class="bg-warn-focus text-primary-content rounded p-sm">focused warn content</div>
+			<div class="bg-warn text-warn-content rounded p-sm">warn content</div>
+			<div class="bg-warn-focus text-warn-content rounded p-sm">focused warn content</div>
 		</div>
 
 		<div class="flex gap-sm">
-			<div class="bg-danger text-primary-content rounded p-sm">danger content</div>
-			<div class="bg-danger-focus text-primary-content rounded p-sm">focused danger content</div>
+			<div class="bg-danger text-danger-content rounded p-sm">danger content</div>
+			<div class="bg-danger-focus text-danger-content rounded p-sm">focused danger content</div>
 		</div>
 	</div>
 </Section>

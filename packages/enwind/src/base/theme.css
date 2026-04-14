@@ -16,10 +16,13 @@
     /* TODO add content colors for each of these */
     --color-success: var(--_ew-color-success);
     --color-success-focus: var(--_ew-color-success-focus);
+    --color-success-content: var(--_ew-color-success-content);
     --color-warn: var(--_ew-color-warn);
     --color-warn-focus: var(--_ew-color-warn-focus);
+    --color-warn-content: var(--_ew-color-warn-content);
     --color-danger: var(--_ew-color-danger);
     --color-danger-focus: var(--_ew-color-danger-focus);
+    --color-danger-content: var(--_ew-color-danger-content);
 
     /* Code */
     --color-code: var(--_ew-color-code);

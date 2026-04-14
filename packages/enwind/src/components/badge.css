@@ -10,15 +10,15 @@
     }
 
     .badge.badge-success {
-        @apply bg-success text-primary-content;
+        @apply bg-success text-success-content;
     }
 
     .badge.badge-warn {
-        @apply bg-warn text-primary-content;
+        @apply bg-warn text-warn-content;
     }
 
     .badge.badge-danger {
-        @apply bg-danger text-primary-content;
+        @apply bg-danger text-danger-content;
     }
 
     /* Sizes */
