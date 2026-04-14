@@ -33,4 +33,15 @@
     --color-code-tag: var(--_ew-color-code-tag);
     --color-code-title: var(--_ew-color-code-title);
     --color-code-variable: var(--_ew-color-code-variable);
+
+    /* Spacing */
+    --spacing-px: 1px;
+    --spacing-0: 0;
+    --spacing-xs: --spacing(1);
+    --spacing-sm: --spacing(2);
+    --spacing-md: --spacing(4);
+    --spacing-lg: --spacing(6);
+    --spacing-xl: --spacing(8);
+    --spacing-2xl: --spacing(12);
+    --spacing-3xl: --spacing(16);
 }
