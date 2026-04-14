@@ -7,14 +7,20 @@
 		class?: string;
 		content: string;
 		children?: Snippet;
+		svelte?: boolean;
 	}
 
-	let { title = '', class: className = '', content, children }: Props = $props();
+	let { title = '', class: className = '', content, svelte, children }: Props = $props();
 </script>
 
 <div class="flex flex-col gap-sm border border-body-highlight rounded">
 	{#if title}
-		<h3 class="p-sm text-xl font-mono">{title}</h3>
+		<h3 class="p-sm text-xl flex items-center gap-sm">
+			<span class="font-mono">{title}</span>
+			{#if svelte}
+				<span class="badge badge-primary badge-sm">Svelte</span>
+			{/if}
+		</h3>
 	{/if}
 	<div class="p-sm {className}">
 		{@render children?.()}

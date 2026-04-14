@@ -16,6 +16,7 @@
 <script>
 <audio bind:this={audioEl}>
 <Audio audio={audioEl} />`}
+		svelte
 	>
 		<audio src="https://cdn.pixabay.com/audio/2024/06/25/audio_edba63c54d.mp3" bind:this={audio}
 		></audio>
