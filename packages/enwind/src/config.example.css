@@ -1,0 +1,6 @@
+/*
+    This file is included as an example to get editor completion working...
+    To be removed when a proper workaround is found.
+*/
+@import "tailwindcss";
+@import "index.css";

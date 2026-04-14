@@ -1,5 +1,4 @@
 @layer base {
-    /* TODO dark mode class */
     :root {
         /* Colors */
         color-scheme: light;
@@ -35,6 +34,7 @@
         --_ew-color-code-title: var(--color-red-900);
         --_ew-color-code-variable: var(--color-red-900);
 
+        /* TODO add dark mode class support */
         @variant dark {
             color-scheme: dark;
 
@@ -73,7 +73,6 @@
     a {
         color: var(--color-primary);
 
-        /* TODO group? */
         @variant hover {
             color: var(--color-primary-focus);
         }
