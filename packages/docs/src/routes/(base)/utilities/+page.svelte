@@ -7,8 +7,29 @@
 <Section title="Spacing">
 	<div class="inline-grid grid-cols-2 gap-sm">
 		{#each spacingClasses as spacing, i (i)}
-			<span>{spacing}</span>
+			<span>.{spacing}</span>
 			<div class="bg-primary text-primary-content {spacing}">&nbsp;</div>
 		{/each}
 	</div>
+</Section>
+
+<!-- TODO add examples -->
+<Section title="Utility classes">
+	<ul>
+		<li>
+			<code>.opacity-disabled</code>
+		</li>
+		<li>
+			<code>.outline-sm</code>
+		</li>
+		<li>
+			<code>.z-base</code>
+		</li>
+		<li>
+			<code>.z-drawer</code>
+		</li>
+		<li>
+			<code>.z-modal</code>
+		</li>
+	</ul>
 </Section>
