@@ -19,9 +19,11 @@
 			title: 'Components',
 			items: [
 				'Audio',
+				'Badges',
 				'Buttons',
 				'Codeblock',
 				'Drawer',
+				'Icons',
 				'Inputs',
 				'Modals',
 				'Progress',
