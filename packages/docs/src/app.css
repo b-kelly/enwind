@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@source '../svelte/**/*.{html,js,svelte,ts}';
+@source '../../svelte/**/*.{html,js,svelte,ts}';
 @import '@enwindui/enwind';
 
 html,
