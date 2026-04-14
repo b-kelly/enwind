@@ -17,9 +17,10 @@
 
 	const drawerStore = getDrawerStore();
 
-	function toggleMode() {
-		document.body.classList.toggle('theme-dark');
-	}
+	// TODO reenable when dark mode class support is readded
+	// function toggleMode() {
+	// 	document.body.classList.toggle('theme-dark');
+	// }
 
 	onNavigate(() => {
 		drawerStore.close();
@@ -38,14 +39,14 @@
 				<span class="sr-only">Menu</span>
 			</button>
 			<h1 class="text-3xl font-bold"><a href={resolve('/')}>enwind</a></h1>
-			<button
+			<!-- <button
 				class="btn inline-flex items-center gap-xs ml-auto"
 				onclick={toggleMode}
 				type="button"
 			>
 				<Icon icon="sparkles" />
 				Switch mode
-			</button>
+			</button> -->
 		</nav>
 	{/snippet}
 
