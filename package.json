@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "lerna run dev",
     "build": "lerna run build",
-    "version": "lerna version --no-private"
+    "version": "lerna version --no-private",
+    "publish:enwind": "npm publish -w @enwindui/enwind --access public",
+    "publish:svelte": "npm publish -w @enwindui/svelte --access public"
   },
   "devDependencies": {
     "lerna": "9.0.7",
