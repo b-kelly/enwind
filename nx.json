@@ -22,5 +22,6 @@
     "production": [
       "default"
     ]
-  }
+  },
+  "analytics": false
 }
