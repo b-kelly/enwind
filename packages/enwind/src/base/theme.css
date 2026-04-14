@@ -13,6 +13,7 @@
     --color-primary-focus: var(--_ew-color-primary-focus);
 
     /* Status */
+    /* TODO add content colors for each of these */
     --color-success: var(--_ew-color-success);
     --color-success-focus: var(--_ew-color-success-focus);
     --color-warn: var(--_ew-color-warn);
