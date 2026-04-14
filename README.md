@@ -10,45 +10,9 @@ A simple design system written for use in my personal projects. I had a set of T
 npm install @enwindui/enwind
 ```
 
-Add the plugin to your `tailwind.config.js` file:
+Import the plugin in your Tailwind css file:
 
-```js
-import enwind from "@enwindui/enwind";
-
-export default {
-    // ...
-    theme: {
-        extend: {},
-    },
-    plugins: [
-        enwind({
-            // you can optionally enable strict mode to remove all non-enwind utility classes; defaults to `false`
-            strict: true,
-        }),
-    ],
-};
+```css
+@import "tailwindcss";
+@import "@enwindui/enwind";
 ```
-
-## Colors
-
-Colors can be overridden in the `enwind` section of your Tailwind config:
-
-```json
-{
-    "theme": {
-        "extend": {
-            "enwind": {
-                "colors": {
-                    "dark": {
-                        "body": {
-                            "DEFAULT": "#ccc"
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-```
-
-Default values can be found in [colors.ts](./src/colors.ts).
