@@ -18,14 +18,14 @@
 	{/if}
 
 	<div class="content">
-		<div class="gap-lg mx-auto flex w-full max-w-screen-lg">
+		<div class="gap-lg mx-auto w-full max-w-screen-lg">
 			{#if props.sidebar}
 				<aside class="contents">
 					{@render props.sidebar?.()}
 				</aside>
 			{/if}
 
-			<main class="flex-1">{@render props.children?.()}</main>
+			<main>{@render props.children?.()}</main>
 		</div>
 
 		{#if props.footer}
