@@ -6,21 +6,36 @@
 		title?: string;
 		class?: string;
 		content: string;
-		children?: Snippet;
 		svelte?: boolean;
+		children?: Snippet;
+		description?: Snippet;
 	}
 
-	let { title = '', class: className = '', content, svelte, children }: Props = $props();
+	let {
+		title = '',
+		class: className = '',
+		content,
+		svelte,
+		children,
+		description
+	}: Props = $props();
 </script>
 
 <div class="flex flex-col gap-sm border border-body-highlight rounded">
-	{#if title}
-		<h3 class="p-sm text-xl flex items-center gap-sm">
-			<span class="font-mono">{title}</span>
-			{#if svelte}
-				<span class="badge badge-primary badge-sm">Svelte</span>
+	{#if title || description}
+		<div class="flex flex-col p-sm">
+			{#if title}
+				<h3 class="text-xl flex items-center gap-sm">
+					<span class="font-mono">{title}</span>
+					{#if svelte}
+						<span class="badge badge-primary badge-sm">Svelte</span>
+					{/if}
+				</h3>
 			{/if}
-		</h3>
+			{#if description}
+				<p class="text-sm">{@render description()}</p>
+			{/if}
+		</div>
 	{/if}
 	<div class="p-sm {className}">
 		{@render children?.()}
