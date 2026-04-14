@@ -1,6 +1,6 @@
 {
 	"name": "@enwindui/svelte",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"license": "MIT",
 	"scripts": {
 		"dev": "svelte-package -w",
@@ -51,7 +51,7 @@
 		"vitest": "^4.1.4"
 	},
 	"dependencies": {
-		"@enwindui/enwind": "*"
+		"@enwindui/enwind": "^0.8.0"
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
