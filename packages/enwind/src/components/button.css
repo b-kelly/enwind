@@ -38,7 +38,7 @@
         @apply opacity-disabled pointer-events-none;
     }
 
-    /* TODO Primary button */
+    /* Primary button */
 
     .btn-primary {
         --_btn-fc: var(--color-primary-content);

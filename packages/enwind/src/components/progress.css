@@ -12,7 +12,7 @@
 
     .progress-circle {
         --value: 0;
-        --width: 8rem; /* TODO theme("width.32") */
+        --width: --spacing(32);
         --thickness: calc(var(--width) / 10);
 
         @apply relative inline-flex items-center justify-center rounded-full overflow-hidden text-primary-focus;
