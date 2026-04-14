@@ -49,20 +49,11 @@
             --_ew-color-body-highlight: var(--color-slate-600);
             --_ew-color-body-overlay: rgb(0 0 0 / 0.5);
 
-            /* TODO copied from light mode */
-
-            --_ew-color-success: var(--color-green-500);
-            --_ew-color-success-focus: var(--color-green-600);
-            --_ew-color-warn: var(--color-amber-400);
-            --_ew-color-warn-focus: var(--color-amber-500);
-            --_ew-color-danger: var(--color-red-500);
-            --_ew-color-danger-focus: var(--color-red-600);
-
             --_ew-color-code: var(--_ew-color-body-content);
             --_ew-color-code-addition: var(--_ew-color-success);
             --_ew-color-code-attr: var(--_ew-color-body-content-dark);
             --_ew-color-code-builtin: var(--color-green-600);
-            --_ew-color-code-comment: var(--_ew-color-body-content-light0);
+            --_ew-color-code-comment: var(--_ew-color-body-content-light);
             --_ew-color-code-deletion: var(--_ew-color-danger);
             --_ew-color-code-literal: var(--color-green-500);
             --_ew-color-code-meta: var(--color-cyan-500);
