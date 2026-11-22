@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@import '@enwindui/enwind';
+
+html,
+body {
+	@apply h-full;
+}
+
+body {
+	@apply min-h-full;
+}
+
+/* TODO add to enwind -> base */
+::-webkit-scrollbar {
+	@apply w-sm h-sm;
+}
+
+::-webkit-scrollbar-track {
+	@apply px-px;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply rounded bg-primary;
+}

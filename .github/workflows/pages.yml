@@ -23,12 +23,12 @@ jobs:
             - name: build
               run: |
                   npm run build
-                  touch packages/docs/build/.nojekyll
+                  touch packages/svelte/build/.nojekyll
 
             - name: Upload Artifacts
               uses: actions/upload-pages-artifact@v3
               with:
-                  path: "packages/docs/build/"
+                  path: "packages/svelte/build/"
 
     deploy:
         needs: build_site

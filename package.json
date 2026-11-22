@@ -5,14 +5,14 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "lerna run dev",
-    "build": "lerna run build",
-    "version": "lerna version --no-private",
+    "dev": "npm run dev -w @enwindui/svelte",
+    "build": "npm run build -w @enwindui/svelte",
+    "check": "npm run check -w @enwindui/svelte",
+    "test": "npm run test -w @enwindui/svelte -- --run",
     "publish:enwind": "npm publish -w @enwindui/enwind --access public",
     "publish:svelte": "npm publish -w @enwindui/svelte --access public"
   },
   "devDependencies": {
-    "lerna": "10.1.3",
     "typescript": "^6.0.2"
   }
 }
