@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Icon from '$lib/Icon.svelte';
+	import Icon from '#lib/Icon.svelte';
 	import xmark from 'heroicons/20/solid/x-mark.svg?raw';
 	import type { Snippet } from 'svelte';
 	import { onMount } from 'svelte';
