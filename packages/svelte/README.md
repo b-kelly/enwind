@@ -18,18 +18,3 @@ Import Tailwind and enwind in your CSS:
 @import 'tailwindcss';
 @import '@enwindui/enwind';
 ```
-
-Initialize the stores once, in your root layout, so `Modal` and `Drawer` can be opened and closed:
-
-```svelte
-<!-- src/routes/+layout.svelte -->
-<script>
-	import { initializeStores } from '@enwindui/svelte';
-
-	let { children } = $props();
-
-	initializeStores();
-</script>
-
-{@render children()}
-```

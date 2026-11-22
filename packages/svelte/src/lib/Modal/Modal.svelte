@@ -2,62 +2,79 @@
 	import Icon from '#lib/Icon.svelte';
 	import xmark from 'heroicons/20/solid/x-mark.svg?raw';
 	import type { Snippet } from 'svelte';
-	import { onMount } from 'svelte';
-	import { getModalStore } from './store.js';
+	import type { HTMLDialogAttributes } from 'svelte/elements';
 
-	interface Props {
-		id: string;
+	interface Props extends Omit<HTMLDialogAttributes, 'open' | 'title' | 'class'> {
+		/** Whether the modal is shown; use `bind:open` */
+		open?: boolean;
 		title?: Snippet;
 		body?: Snippet;
 		footer?: Snippet;
-		[key: string]: unknown;
+		/** Close when clicking outside the dialog panel (default `true`) */
+		closeOnBackdrop?: boolean;
+		/** Classes for the dialog panel (`.modal-dialog`) */
+		class?: string;
 	}
 
-	const { id = '', title, body, footer, ...props }: Props = $props();
+	let {
+		open = $bindable(false),
+		title,
+		body,
+		footer,
+		closeOnBackdrop = true,
+		class: className = '',
+		...rest
+	}: Props = $props();
 
-	const store = getModalStore();
-	let backdrop: HTMLElement | undefined = $state();
+	const titleId = $props.id();
+	let dialog: HTMLDialogElement | undefined = $state();
 
-	onMount(() => {
-		store.register(id);
+	$effect(() => {
+		if (!dialog) return;
+
+		if (open && !dialog.open) {
+			dialog.showModal();
+		} else if (!open && dialog.open) {
+			dialog.close();
+		}
 	});
-
-	function interact(e: MouseEvent) {
-		if (e.target === backdrop) {
-			store.close(id);
-		}
-	}
-
-	function onEscape(e: KeyboardEvent) {
-		if (e.code === 'Escape') {
-			store.close(id);
-		}
-	}
 </script>
 
-<svelte:window on:keydown={onEscape} />
-
-<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-<aside
+<dialog
+	{...rest}
+	bind:this={dialog}
 	class="modal"
-	class:visible={$store[id]}
-	{id}
-	bind:this={backdrop}
-	onclick={interact}
-	onkeydown={onEscape}
+	aria-labelledby={title ? titleId : undefined}
+	onclose={() => (open = false)}
+	onclick={(e) => {
+		if (closeOnBackdrop && e.target === dialog) {
+			open = false;
+		}
+	}}
 >
-	<div class="modal-dialog {props.class}" role="dialog" aria-modal="true">
+	<div class="modal-dialog {className}">
 		<header class="modal-title">
-			{@render title?.()}
-			<button type="button" class="btn btn-icon text-current" onclick={() => store.close(id)}>
-				<Icon title="Close" icon={xmark} />
+			{#if title}
+				<h2 id={titleId}>{@render title()}</h2>
+			{/if}
+			<button
+				type="button"
+				class="btn btn-icon ml-auto text-current"
+				onclick={() => (open = false)}
+			>
+				<Icon icon={xmark} />
+				<span class="sr-only">Close</span>
 			</button>
 		</header>
-		<section class="modal-body">
-			{@render body?.()}
-		</section>
-		<footer class="modal-footer">
-			{@render footer?.()}
-		</footer>
+		{#if body}
+			<section class="modal-body">
+				{@render body()}
+			</section>
+		{/if}
+		{#if footer}
+			<footer class="modal-footer">
+				{@render footer()}
+			</footer>
+		{/if}
 	</div>
-</aside>
+</dialog>

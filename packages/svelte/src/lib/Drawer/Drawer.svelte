@@ -1,50 +1,50 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import { onMount } from 'svelte';
-	import { getDrawerStore } from './store.js';
+	import type { HTMLDialogAttributes } from 'svelte/elements';
 
-	interface Props {
-		id: string;
+	interface Props extends Omit<HTMLDialogAttributes, 'open' | 'class'> {
+		/** Whether the drawer is shown; use `bind:open` */
+		open?: boolean;
 		children?: Snippet;
-		[key: string]: unknown;
+		/** Close when clicking outside the drawer panel (default `true`) */
+		closeOnBackdrop?: boolean;
+		/** Classes for the drawer panel (`.drawer-contents`) */
+		class?: string;
 	}
 
-	const { id = '', children, ...props }: Props = $props();
+	let {
+		open = $bindable(false),
+		children,
+		closeOnBackdrop = true,
+		class: className = '',
+		...rest
+	}: Props = $props();
 
-	const store = getDrawerStore();
-	let backdrop: HTMLElement | undefined = $state();
+	let dialog: HTMLDialogElement | undefined = $state();
 
-	onMount(() => {
-		store.register(id);
+	$effect(() => {
+		if (!dialog) return;
+
+		if (open && !dialog.open) {
+			dialog.showModal();
+		} else if (!open && dialog.open) {
+			dialog.close();
+		}
 	});
-
-	function interact(e: MouseEvent) {
-		if (e.target === backdrop) {
-			store.close(id);
-		}
-	}
-
-	function onEscape(e: KeyboardEvent) {
-		if (e.code === 'Escape') {
-			store.close(id);
-		}
-	}
 </script>
 
-<svelte:window on:keydown={onEscape} />
-
-{#if $store[id]}
-	<!-- svelte-ignore a11y_no_static_element_interactions -->
-	<div
-		{id}
-		bind:this={backdrop}
-		class="drawer {props.class}"
-		onclick={interact}
-		onkeydown={onEscape}
-		aria-expanded={$store[id]}
-	>
-		<div class="drawer-contents {props.class}" role="dialog" aria-modal="true">
-			{@render children?.()}
-		</div>
+<dialog
+	{...rest}
+	bind:this={dialog}
+	class="drawer"
+	onclose={() => (open = false)}
+	onclick={(e) => {
+		if (closeOnBackdrop && e.target === dialog) {
+			open = false;
+		}
+	}}
+>
+	<div class="drawer-contents {className}">
+		{@render children?.()}
 	</div>
-{/if}
+</dialog>

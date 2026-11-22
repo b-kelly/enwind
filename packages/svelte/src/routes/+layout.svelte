@@ -3,7 +3,7 @@
 	import { resolve } from '$app/paths';
 	import Icon from '#docs/Icon.svelte';
 	import Sidebar from '#docs/Sidebar.svelte';
-	import { AppLayout, Drawer, getDrawerStore, initializeStores } from '#lib';
+	import { AppLayout, Drawer } from '#lib';
 	import type { Snippet } from 'svelte';
 	import '../app.css';
 
@@ -13,9 +13,7 @@
 
 	let { children }: Props = $props();
 
-	initializeStores();
-
-	const drawerStore = getDrawerStore();
+	let menuOpen = $state(false);
 
 	// TODO reenable when dark mode class support is readded
 	// function toggleMode() {
@@ -24,18 +22,18 @@
 	onNavigate(({ shallow, type }) => {
 		if (shallow && type === 'goto') return;
 
-		drawerStore.close();
+		menuOpen = false;
 	});
 </script>
 
-<Drawer id="sidebar-drawer" class="lg:hidden">
+<Drawer bind:open={menuOpen} aria-label="Menu">
 	<Sidebar class="p-md flex" />
 </Drawer>
 
 <AppLayout>
 	{#snippet header()}
-		<nav class="mx-auto w-full max-w-screen-lg flex items-center gap-sm py-md">
-			<button class="btn lg:hidden" onclick={() => drawerStore.open()}>
+		<nav class="gap-sm py-md mx-auto flex w-full max-w-screen-lg items-center">
+			<button class="btn lg:hidden" aria-expanded={menuOpen} onclick={() => (menuOpen = true)}>
 				<Icon icon="bars3" />
 				<span class="sr-only">Menu</span>
 			</button>
