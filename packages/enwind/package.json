@@ -11,12 +11,6 @@
     "files": [
         "src"
     ],
-    "scripts": {
-        "prepublishOnly": "copyfiles ../../README.md ./enwind/README.md"
-    },
-    "devDependencies": {
-        "copyfiles": "^2.4.1"
-    },
     "dependencies": {
         "tailwindcss": "^4.3.5"
     }

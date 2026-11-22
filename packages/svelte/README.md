@@ -1,58 +1,35 @@
-# create-svelte
+# @enwindui/svelte
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Svelte 5 components for [enwind](https://github.com/b-kelly/enwind), a small Tailwind CSS v4 design system.
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+## Installation
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+npm install @enwindui/svelte
 ```
 
-## Developing
+Requires Svelte 5 and Vite (icons are imported with `?raw`). `@enwindui/enwind` and `heroicons` are installed as dependencies.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Setup
 
-```bash
-npm run dev
+Import Tailwind and enwind in your CSS:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```css
+@import 'tailwindcss';
+@import '@enwindui/enwind';
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+Initialize the stores once, in your root layout, so `Modal` and `Drawer` can be opened and closed:
 
-## Building
+```svelte
+<!-- src/routes/+layout.svelte -->
+<script>
+	import { initializeStores } from '@enwindui/svelte';
 
-To build your library:
+	let { children } = $props();
 
-```bash
-npm run package
-```
+	initializeStores();
+</script>
 
-To create a production version of your showcase app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
+{@render children()}
 ```
