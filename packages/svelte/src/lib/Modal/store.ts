@@ -1,7 +1,7 @@
 import { writable, type Writable } from 'svelte/store';
 import { getContext, setContext } from 'svelte';
 
-const CTX_KEY = 'ENWIND_DRAWER_STORE';
+const CTX_KEY = 'ENWIND_MODAL_STORE';
 
 interface ModalSettings {
 	[key: string]: boolean;
@@ -16,19 +16,19 @@ export interface ModalStore extends Writable<ModalSettings> {
 }
 
 export function getModalStore(): ModalStore {
-	const drawerStore = getContext<ModalStore | undefined>(CTX_KEY);
+	const modalStore = getContext<ModalStore | undefined>(CTX_KEY);
 
-	if (!drawerStore) {
-		throw 'drawer store is not initialized; call `initializeStores()` in your root layout';
+	if (!modalStore) {
+		throw 'modal store is not initialized; call `initializeStores()` in your root layout';
 	}
 
-	return drawerStore;
+	return modalStore;
 }
 
 export function initializeModalStore(): ModalStore {
-	const drawerStore = createModalStore();
+	const modalStore = createModalStore();
 
-	return setContext(CTX_KEY, drawerStore);
+	return setContext(CTX_KEY, modalStore);
 }
 
 function createModalStore() {
