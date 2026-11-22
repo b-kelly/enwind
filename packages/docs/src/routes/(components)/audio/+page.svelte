@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Sample from '$lib/Sample.svelte';
-	import Section from '$lib/Section.svelte';
+	import Sample from '#lib/Sample.svelte';
+	import Section from '#lib/Section.svelte';
 	import { Audio } from '@enwindui/svelte';
 
 	let audio: HTMLAudioElement | undefined = $state();

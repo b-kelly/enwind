@@ -1,6 +1,6 @@
 <script>
-	import Sample from '$lib/Sample.svelte';
-	import Section from '$lib/Section.svelte';
+	import Sample from '#lib/Sample.svelte';
+	import Section from '#lib/Section.svelte';
 	import { Icon } from '@enwindui/svelte';
 	import home from 'heroicons/20/solid/home.svg?raw';
 	import homeLg from 'heroicons/24/solid/home.svg?raw';

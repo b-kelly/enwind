@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { highlight } from '$lib/highlight';
-	import Sample from '$lib/Sample.svelte';
-	import Section from '$lib/Section.svelte';
+	import { highlight } from '#lib/highlight.ts';
+	import Sample from '#lib/Sample.svelte';
+	import Section from '#lib/Section.svelte';
 </script>
 
 <!-- eslint-disable svelte/no-at-html-tags -->

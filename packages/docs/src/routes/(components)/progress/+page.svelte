@@ -1,6 +1,6 @@
 <script>
-	import Sample from '$lib/Sample.svelte';
-	import Section from '$lib/Section.svelte';
+	import Sample from '#lib/Sample.svelte';
+	import Section from '#lib/Section.svelte';
 </script>
 
 <Section title="Progress bar">

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Section from '$lib/Section.svelte';
+	import Section from '#lib/Section.svelte';
 
 	const spacingClasses = ['w-0', 'w-px', 'w-xs', 'w-sm', 'w-md', 'w-lg', 'w-xl', 'w-2xl', 'w-3xl'];
 </script>

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onNavigate } from '$app/navigation';
 	import { resolve } from '$app/paths';
-	import Icon from '$lib/Icon.svelte';
-	import Sidebar from '$lib/Sidebar.svelte';
+	import Icon from '#lib/Icon.svelte';
+	import Sidebar from '#lib/Sidebar.svelte';
 	import { AppLayout, Drawer, getDrawerStore, initializeStores } from '@enwindui/svelte';
 	import type { Snippet } from 'svelte';
 	import '../app.css';
@@ -21,8 +21,9 @@
 	// function toggleMode() {
 	// 	document.body.classList.toggle('theme-dark');
 	// }
+	onNavigate(({ shallow, type }) => {
+		if (shallow && type === 'goto') return;
 
-	onNavigate(() => {
 		drawerStore.close();
 	});
 </script>
@@ -35,7 +36,7 @@
 	{#snippet header()}
 		<nav class="mx-auto w-full max-w-screen-lg flex items-center gap-sm py-md">
 			<button class="btn lg:hidden" onclick={() => drawerStore.open()}>
-				<Icon icon="bars3"></Icon>
+				<Icon icon="bars3" />
 				<span class="sr-only">Menu</span>
 			</button>
 			<h1 class="text-3xl font-bold"><a href={resolve('/')}>enwind</a></h1>

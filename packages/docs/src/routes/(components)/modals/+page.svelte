@@ -1,7 +1,7 @@
 <script>
-	import Icon from '$lib/Icon.svelte';
-	import Sample from '$lib/Sample.svelte';
-	import Section from '$lib/Section.svelte';
+	import Icon from '#lib/Icon.svelte';
+	import Sample from '#lib/Sample.svelte';
+	import Section from '#lib/Section.svelte';
 </script>
 
 <Section title="Modals">
