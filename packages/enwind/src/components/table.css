@@ -1,22 +1,22 @@
 @layer components {
-    .table {
-        @apply w-full max-w-full border-collapse border-0;
-    }
+	.table {
+		@apply w-full max-w-full border-collapse border-0;
+	}
 
-    .table tr {
-        @apply border-b border-b-body-highlight;
-    }
+	.table tr {
+		@apply border-b-body-highlight border-b;
+	}
 
-    .table tr:last-of-type {
-        @apply border-b-transparent;
-    }
+	.table tr:last-of-type {
+		@apply border-b-transparent;
+	}
 
-    .table th,
-    .table td {
-        @apply p-2 align-middle text-left;
-    }
+	.table th,
+	.table td {
+		@apply p-2 text-left align-middle;
+	}
 
-    .table thead th {
-        @apply font-bold align-bottom whitespace-nowrap leading-tight border-b border-b-body-highlight;
-    }
+	.table thead th {
+		@apply border-b-body-highlight border-b align-bottom leading-tight font-bold whitespace-nowrap;
+	}
 }

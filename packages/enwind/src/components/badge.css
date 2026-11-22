@@ -1,42 +1,42 @@
 @layer components {
-    .badge {
-        @apply inline-block whitespace-nowrap leading-none px-2 py-1.5 bg-body-highlight text-center rounded-sm text-body-content-dark;
-    }
+	.badge {
+		@apply bg-body-highlight text-body-content-dark inline-block rounded-sm px-2 py-1.5 text-center leading-none whitespace-nowrap;
+	}
 
-    /* Status variants */
+	/* Status variants */
 
-    .badge.badge-primary {
-        @apply bg-primary text-primary-content;
-    }
+	.badge.badge-primary {
+		@apply bg-primary text-primary-content;
+	}
 
-    .badge.badge-success {
-        @apply bg-success text-success-content;
-    }
+	.badge.badge-success {
+		@apply bg-success text-success-content;
+	}
 
-    .badge.badge-warn {
-        @apply bg-warn text-warn-content;
-    }
+	.badge.badge-warn {
+		@apply bg-warn text-warn-content;
+	}
 
-    .badge.badge-danger {
-        @apply bg-danger text-danger-content;
-    }
+	.badge.badge-danger {
+		@apply bg-danger text-danger-content;
+	}
 
-    /* Sizes */
-    .badge.badge-sm {
-        @apply text-sm px-1.5 py-1;
-    }
+	/* Sizes */
+	.badge.badge-sm {
+		@apply px-1.5 py-1 text-sm;
+	}
 
-    /* Pill */
-    .badge.badge-pill {
-        @apply rounded-full px-4;
-    }
+	/* Pill */
+	.badge.badge-pill {
+		@apply rounded-full px-4;
+	}
 
-    .badge.badge-pill.badge-sm {
-        @apply px-3;
-    }
+	.badge.badge-pill.badge-sm {
+		@apply px-3;
+	}
 
-    /* Indicator */
-    .badge.badge-indicator {
-        @apply absolute top-0 right-0 rounded-full outline-body outline-1 translate-x-1/2 -translate-y-1/2 text-xs px-2 py-1.5 min-h-md min-w-md;
-    }
+	/* Indicator */
+	.badge.badge-indicator {
+		@apply outline-body min-h-md absolute top-0 right-0 min-w-md translate-x-1/2 -translate-y-1/2 rounded-full px-2 py-1.5 text-xs outline-1;
+	}
 }

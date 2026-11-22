@@ -1,21 +1,21 @@
 @layer components {
-  .modal {
-    @apply fixed inset-0 m-0 p-lg size-full max-w-none max-h-none border-0 bg-transparent text-current items-center justify-center;
-  }
+	.modal {
+		@apply p-lg fixed inset-0 m-0 size-full max-h-none max-w-none items-center justify-center border-0 bg-transparent text-current;
+	}
 
-  .modal[open] {
-    @apply flex;
-  }
+	.modal[open] {
+		@apply flex;
+	}
 
-  .modal::backdrop {
-    @apply bg-body-overlay backdrop-blur-sm;
-  }
+	.modal::backdrop {
+		@apply bg-body-overlay backdrop-blur-sm;
+	}
 
-  .modal .modal-dialog {
-    @apply bg-body max-w-full w-full rounded border p-lg flex flex-col gap-lg;
-  }
+	.modal .modal-dialog {
+		@apply bg-body p-lg gap-lg flex w-full max-w-full flex-col rounded border;
+	}
 
-  .modal .modal-title {
-    @apply text-2xl leading-8 flex items-start justify-between;
-  }
+	.modal .modal-title {
+		@apply flex items-start justify-between text-2xl leading-8;
+	}
 }

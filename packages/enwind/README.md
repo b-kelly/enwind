@@ -13,6 +13,6 @@ npm install @enwindui/enwind
 Import the plugin in your Tailwind css file:
 
 ```css
-@import "tailwindcss";
-@import "@enwindui/enwind";
+@import 'tailwindcss';
+@import '@enwindui/enwind';
 ```

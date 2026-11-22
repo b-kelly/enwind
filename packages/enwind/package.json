@@ -1,17 +1,25 @@
 {
-    "name": "@enwindui/enwind",
-    "version": "0.8.1",
-    "type": "module",
-    "exports": {
-        ".": {
-            "import": "./src/index.css",
-            "style": "./src/index.css"
-        }
-    },
-    "files": [
-        "src"
-    ],
-    "dependencies": {
-        "tailwindcss": "^4.3.5"
-    }
+	"name": "@enwindui/enwind",
+	"version": "0.8.1",
+	"type": "module",
+	"scripts": {
+		"lint": "prettier --check .",
+		"format": "prettier --write ."
+	},
+	"exports": {
+		".": {
+			"import": "./src/index.css",
+			"style": "./src/index.css"
+		}
+	},
+	"files": [
+		"src"
+	],
+	"dependencies": {
+		"tailwindcss": "^4.3.5"
+	},
+	"devDependencies": {
+		"prettier": "^3.10.1",
+		"prettier-plugin-tailwindcss": "^0.7.4"
+	}
 }
