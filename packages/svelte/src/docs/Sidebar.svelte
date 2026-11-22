@@ -35,11 +35,11 @@
 	];
 </script>
 
-<div class="flex flex-col gap-md {props.class}">
+<div class="gap-md flex flex-col {props.class}">
 	<a href={resolve('/')}>Home</a>
 	{#each menu as cat, i (i)}
 		<div>
-			<h2 class="text-xl mb-xs">{cat.title}</h2>
+			<h2 class="mb-xs text-xl">{cat.title}</h2>
 			<ul>
 				{#each cat.items as item, i (i)}
 					<li>

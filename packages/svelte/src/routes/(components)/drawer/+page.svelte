@@ -9,7 +9,7 @@
 <Section title="Drawer">
 	<Sample
 		title=".drawer"
-		class="flex flex-col gap-sm"
+		class="gap-sm flex flex-col"
 		content={`<dialog class="drawer" aria-label="Menu">
 	<div class="drawer-contents">Drawer contents</div>
 </dialog>
@@ -19,7 +19,7 @@
 <\/script>`}
 	>
 		<!-- Shown inline (non-modal) for the preview -->
-		<dialog open class="drawer relative h-96 border border-body-highlight bg-body-overlay">
+		<dialog open class="drawer border-body-highlight bg-body-overlay relative h-96 border">
 			<div class="drawer-contents">Drawer contents</div>
 		</dialog>
 	</Sample>

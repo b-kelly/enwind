@@ -7,7 +7,7 @@
 <!-- eslint-disable svelte/no-at-html-tags -->
 <Section title="Code block">
 	<Sample
-		class="flex flex-col gap-sm"
+		class="gap-sm flex flex-col"
 		content={`<pre class=".codeblock"><code>Your highlight.js output</code></pre>`}
 	>
 		<pre class="codeblock"><code

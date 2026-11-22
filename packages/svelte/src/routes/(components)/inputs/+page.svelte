@@ -6,7 +6,7 @@
 <Section title="Inputs">
 	<Sample
 		title="input[type=text]"
-		class="grid grid-cols-2 gap-sm"
+		class="gap-sm grid grid-cols-2"
 		content={`<input type="text" class="input" />`}
 	>
 		<input type="text" class="input" placeholder="default" />
@@ -15,7 +15,7 @@
 		<input type="text" class="input" placeholder="disabled" disabled />
 	</Sample>
 
-	<Sample title="textarea" class="grid grid-cols-2 gap-sm" content={`<textarea class="input" />`}>
+	<Sample title="textarea" class="gap-sm grid grid-cols-2" content={`<textarea class="input" />`}>
 		<textarea class="input" placeholder="default"></textarea>
 		<textarea class="input focus" placeholder="focus"></textarea>
 		<textarea class="input">filled</textarea>
@@ -24,7 +24,7 @@
 
 	<Sample
 		title="select"
-		class="grid grid-cols-2 gap-sm"
+		class="gap-sm grid grid-cols-2"
 		content={`<select class="input">
 	<option>select</option>
 </select>`}
@@ -42,7 +42,7 @@
 
 	<Sample
 		title="input[type=range]"
-		class="grid grid-cols-2 gap-sm"
+		class="gap-sm grid grid-cols-2"
 		content={`<input type="range" class="input" />`}
 	>
 		<input type="range" class="input" min="0" max="10" placeholder="default" />
@@ -53,7 +53,7 @@
 
 <Section title="Checks">
 	<Sample
-		class="grid grid-cols-2 gap-sm"
+		class="gap-sm grid grid-cols-2"
 		content={`<input type="checkbox" class="check" />
 <input type="checkbox" class="check" checked disabled />
 

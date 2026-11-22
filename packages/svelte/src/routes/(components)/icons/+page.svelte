@@ -10,7 +10,7 @@
 <Section title="Icon">
 	<Sample
 		title=".icon"
-		class="flex gap-md"
+		class="gap-md flex"
 		content={`<span class="icon"><svg>...</svg></span>
 <span class="icon text-primary"><svg>...</svg></span>`}
 	>
@@ -28,7 +28,7 @@
 
 	<Sample
 		title="Size variants"
-		class="flex gap-md"
+		class="gap-md flex"
 		content={`<span class="icon icon-lg"><svg>...</svg></span> Large
 <span class="icon"><svg>...</svg></span> Default
 <span class="icon icon-sm"><svg>...</svg></span> Small`}
@@ -57,7 +57,7 @@
 
 	<Sample
 		title="<Icon /> component"
-		class="flex gap-md"
+		class="gap-md flex"
 		content={`<script>
 	import { Icon } from '@enwindui/svelte';
 	import home from 'heroicons/20/solid/home.svg?raw';

@@ -19,7 +19,7 @@
 	</Sample>
 	<Sample
 		title="Status variants"
-		class="flex gap-md"
+		class="gap-md flex"
 		content={`<span class="badge badge-primary">Primary</span>
 <span class="badge badge-success">Success</span>
 <span class="badge badge-warn">Warn</span>

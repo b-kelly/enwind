@@ -5,7 +5,7 @@
 </script>
 
 <Section title="Spacing">
-	<div class="inline-grid grid-cols-2 gap-sm">
+	<div class="gap-sm inline-grid grid-cols-2">
 		{#each spacingClasses as spacing, i (i)}
 			<span>.{spacing}</span>
 			<div class="bg-primary text-primary-content {spacing}">&nbsp;</div>

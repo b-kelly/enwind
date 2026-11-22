@@ -5,7 +5,7 @@
 
 <Section title="Progress bar">
 	<Sample
-		class="flex flex-col gap-md"
+		class="gap-md flex flex-col"
 		content={`<div
 	class="progress"
 	role="progressbar"
@@ -28,7 +28,7 @@
 
 <Section title="Progress circle">
 	<Sample
-		class="flex gap-md"
+		class="gap-md flex"
 		content={`<div class="progress-circle"
 	role="progressbar"
 	aria-label="current progress"

@@ -9,7 +9,7 @@
 	let { title, children }: Props = $props();
 </script>
 
-<section class="pb-md flex flex-col gap-md">
-	<h2 class="text-2xl mb-sm font-mono">{title}</h2>
+<section class="pb-md gap-md flex flex-col">
+	<h2 class="mb-sm font-mono text-2xl">{title}</h2>
 	{@render children?.()}
 </section>

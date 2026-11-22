@@ -18,7 +18,7 @@
 	{/if}
 
 	<div class="content">
-		<div class="flex gap-lg mx-auto w-full max-w-screen-lg">
+		<div class="gap-lg mx-auto flex w-full max-w-screen-lg">
 			{#if props.sidebar}
 				<aside class="contents">
 					{@render props.sidebar?.()}

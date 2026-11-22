@@ -12,7 +12,7 @@ body {
 
 /* TODO add to enwind -> base */
 ::-webkit-scrollbar {
-	@apply w-sm h-sm;
+	@apply h-sm w-sm;
 }
 
 ::-webkit-scrollbar-track {
@@ -20,5 +20,5 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-	@apply rounded bg-primary;
+	@apply bg-primary rounded;
 }

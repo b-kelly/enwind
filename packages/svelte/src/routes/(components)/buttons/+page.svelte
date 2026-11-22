@@ -7,7 +7,7 @@
 <Section title="Buttons">
 	<Sample
 		title=".btn"
-		class="flex gap-sm"
+		class="gap-sm flex"
 		content={`<button type="button" class="btn">default</button>
 <button type="button" class="btn" disabled>default</button>
 <a href="..." class="btn">link</a>`}
@@ -21,7 +21,7 @@
 
 	<Sample
 		title=".btn.btn-outline"
-		class="flex gap-sm"
+		class="gap-sm flex"
 		content={`<button type="button" class="btn btn-outline">primary</button>
 <button type="button" class="btn btn-outline" disabled>primary</button>
 <a href="..." class="btn btn-outline">link</a>`}
@@ -35,7 +35,7 @@
 
 	<Sample
 		title=".btn.btn-primary"
-		class="flex gap-sm"
+		class="gap-sm flex"
 		content={`<button type="button" class="btn btn-primary">primary</button>
 <button type="button" class="btn btn-primary" disabled>primary</button>
 <a href="..." class="btn btn-primary">link</a>`}
@@ -49,7 +49,7 @@
 
 	<Sample
 		title=".btn.btn-icon"
-		class="flex gap-sm"
+		class="gap-sm flex"
 		content={`<button type="button" class="btn btn-icon"><Icon/></button>
 <button type="button" class="btn btn-icon" disabled><Icon/></button>
 <a href="..." class="btn btn-icon">link</a>`}

@@ -9,7 +9,7 @@
 <Section title="Audio">
 	<Sample
 		title="<Audio /> component"
-		class="flex flex-col gap-sm"
+		class="gap-sm flex flex-col"
 		content={`<script>
     import { Audio } from  "@enwindui/svelte";
 	let audioEl = $state();

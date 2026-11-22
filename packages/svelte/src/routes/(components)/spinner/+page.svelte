@@ -6,7 +6,7 @@
 <Section title="Spinner">
 	<Sample
 		title=".spinner"
-		class="flex gap-md"
+		class="gap-md flex"
 		content={`<div class="spinner">
 	<span class="sr-only">Loading...</span>
 </div>
@@ -24,7 +24,7 @@
 	</Sample>
 	<Sample
 		title="With text"
-		class="flex gap-md"
+		class="gap-md flex"
 		content={`<button class="btn btn-primary spinner" aria-busy="true">Loading...</button>
 <span class="spinner text-body-content">Loading...</span>`}
 	>
