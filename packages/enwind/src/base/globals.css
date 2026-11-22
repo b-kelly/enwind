@@ -84,4 +84,9 @@
             color: var(--color-primary-focus);
         }
     }
+
+    /* Lock page scroll while a modal or drawer is open */
+    :root:has(:is(.modal, .drawer):modal) {
+        overflow: hidden;
+    }
 }

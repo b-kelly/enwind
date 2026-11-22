@@ -1,9 +1,13 @@
 @layer components {
-    .drawer {
-        @apply apply-overlay z-drawer;
-    }
+  .drawer {
+    @apply fixed inset-0 m-0 p-0 size-full max-w-none max-h-none border-0 bg-transparent text-current;
+  }
 
-    .drawer .drawer-contents {
-        @apply bg-body h-full w-1/2 overflow-auto;
-    }
+  .drawer::backdrop {
+    @apply bg-body-overlay backdrop-blur-sm;
+  }
+
+  .drawer .drawer-contents {
+    @apply bg-body h-full w-1/2 overflow-auto;
+  }
 }
